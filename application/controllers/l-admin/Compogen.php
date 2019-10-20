@@ -278,12 +278,79 @@ class Compogen extends Admin_controller {
 					r_copy($path_temp . $file_edit, $path_views.'/'.$file_edit);
 					// copy file_html from temp to application.
 					r_copy($path_temp . $file_html, $path_views.'/'.$file_html);
-					// r_copy($path_temp.$file_modjs, $path_modjs.$file_modjs);
 
 					// delete temp data.
 					delete_folder($path_temp);
+
+
+
+					// FRONTEND FEATURE ---------------------------------------------
+					if (isset($_POST['frontend']['active'])) {
+						$fitur_frontend = TRUE;
+					} else {
+						$fitur_frontend = FALSE;
+					}
+					
+					if ( $fitur_frontend == TRUE )
+					{
+						$layout = $_POST['frontend']['layout'];
+
+						$fpath = [
+							'controllers' => APPPATH . 'controllers/',
+							'models' => APPPATH . 'models/web/',
+							'views' => APPPATH . 'views/themes/'.theme_active('folder').'/',
+							'routes' => APPPATH . 'config/routes/',
+						];
+
+						$f_controller_file = "Mod_" . seotitle($class_name.'_') .".php";
+						$f_model_file      = "Mod_" . seotitle($class_name.'_') ."_model.php";
+						$f_view_file       = "mod_". seotitle($class_name.'_') .".php";
+						$f_route_file      = seotitle($class_name.'_') ."_routes.php";
+						
+						if ( 
+						    !file_exists($fpath['controllers'].$f_controller_file) &&
+						    !file_exists($fpath['models'].$f_model_file) &&
+						    !file_exists($fpath['views'].$f_view_file) &&
+						    !file_exists($fpath['routes'].$f_route_file)
+						    ) 
+						{
+							// controller
+							write_file($fpath['controllers'] . $f_controller_file, dump_frontend_controller($_POST));
+							// model
+							write_file($fpath['models'] . $f_model_file, dump_frontend_model($_POST));
+							// view
+							write_file($fpath['views'] . $f_view_file, dump_frontend_view($_POST));
+							// route
+							write_file($fpath['routes'] . $f_route_file, dump_frontend_route($_POST));
+
+							$this->session->set_flashdata('_frontend', '<span class="text-success">Frontend Ok</span>');
+						}
+
+						else
+						{
+							$this->session->set_flashdata('_frontend', '<span class="text-danger">Frontend Error. Some file is exists.</span>');
+						}
+					}
+					// FRONTEND FEATURE ---------------------------------------------
+
+
+
 					// set session citem for finish status.
 					$this->session->set_flashdata('citem', seotitle($class_name));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 					// finish.
 					$response['success'] = true;
@@ -318,19 +385,29 @@ class Compogen extends Admin_controller {
 	}
 
 
+
+
+
+
+
+
+
+
 	public function finish($val = '')
 	{
 		if ( $this->session->flashdata('citem') == $val ) 
 		{
+			$this->vars['fitur'] = (!empty($_SESSION['_frontend']) ? $_SESSION['_frontend'] : NULL);
 			$this->vars['c_link'] = $val;
 			$this->render_view('success', $this->vars);
-			$this->session->set_flashdata('citem', NULL);
 		}
 		else
 		{
 			$this->render_404();
-			$this->session->set_flashdata('citem', NULL);
 		}
+
+		$this->session->unset_userdata('citem');
+		$this->session->unset_userdata('_frontend');
 	}
 
 
@@ -425,13 +502,13 @@ class Compogen extends Admin_controller {
 							<div class="col-md-6">
 								<div class="form-group">
 									<label>'. lang_line('label_conf_column_name') .'</label>
-									<input type="text" name="col['. $id .'][col_name]" class="form-control" minlength="4" required />
+									<input type="text" name="col['. $id .'][col_name]" class="form-control" minlength="2" required />
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
 									<label>'. lang_line('label_conf_field_data') .'</label>
-									<input type="text" name="col['. $id .'][col_field]" class="form-control" minlength="4" required />
+									<input type="text" name="col['. $id .'][col_field]" class="form-control" minlength="2" required />
 								</div>
 							</div>
 						</div>

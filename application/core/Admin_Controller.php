@@ -40,7 +40,7 @@ class Admin_Controller extends MY_Controller {
 		{
 			$this->load->view('admin/error_404');
 		}
-		elseif ($this->mod_view && file_exists(VIEWPATH."mod/$this->mod/$this->mod_view.php"))
+		elseif ($this->mod_view && file_exists(VIEWPATH . "mod/".$this->mod."/".$this->mod_view.".php"))
 		{
 			$this->load->view('mod/'.$this->mod.'/'.$this->mod_view);
 		}
@@ -51,10 +51,10 @@ class Admin_Controller extends MY_Controller {
 	}
 
 
-	public function render_view($view = '', $var = '', $parm = FALSE)
+	public function render_view($view = '', $data = '', $parm = FALSE)
 	{
 		$this->mod_view = $view;
-		$this->load->view('admin/index', $var, $parm);
+		$this->load->view('admin/index', $data, $parm);
 	}
 
 

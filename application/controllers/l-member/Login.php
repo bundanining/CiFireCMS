@@ -178,7 +178,7 @@ class Login extends MY_Controller {
 					{
 						$photo          = 'user-'.md5(strtotime(date('YmdHis'))).'.jpg';
 						$email          = $this->input->post('email', TRUE);
-						$username       = seotitle($this->input->post('name')).'-'.strtotime(date('YmdHis'));
+						$username       = seotitle($this->input->post('name')) . strtotime(date('YmdHis'));
 						$full_name      = $this->input->post('name',TRUE);
 						$pass           = $this->input->post('password');
 						$password       = encrypt($pass);

@@ -29,6 +29,7 @@ $lang['label_conf_tinymce'] = 'Bidang Konten TinyMCE';
 $lang['label_conf_select'] = 'Bidang Input Pilihan';
 $lang['label_conf_option'] = 'Pilihan';
 $lang['label_conf_datatable'] = 'Datatable';
+$lang['label_conf_frontend'] = 'Antarmuka';
 $lang['label_conf_column'] = 'Kolom';
 $lang['label_conf_column_name'] = 'Nama Kolom';
 $lang['label_conf_field_data'] = 'Data Bidang';

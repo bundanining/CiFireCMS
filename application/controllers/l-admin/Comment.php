@@ -58,7 +58,7 @@ class Comment extends Admin_controller {
 
 					if ($val['active'] == 'X') 
 					{
-						$btn_block = '<span id="btn_block_'.$val['id'].'" class="button btn-xs btn-default modal_unblock" data-toggle="tooltip" data-placement="top" data-title="'.lang_line('button_unblock').'" idCom="'.$val['id'].'"><i class="fa fa-check"></i></span>';
+						$btn_block = '<span id="btn_block_'.$val['id'].'" class="button btn-xs btn-default modal_active" data-toggle="tooltip" data-placement="top" data-title="'.lang_line('button_active').'" idCom="'.$val['id'].'"><i class="fa fa-check"></i></span>';
 					}
 					else
 					{

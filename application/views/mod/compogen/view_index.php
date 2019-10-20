@@ -7,7 +7,10 @@
 	</div>
 
 	<div class="card compogen">
-		<form class="wizard-form steps-validation" autocomplete="on" data-fouc>
+		<form class="wizard-form steps-validation" data-fouc>
+
+
+
 			<!-- Component -->
 			<h6><?php echo lang_line('mod_setp1')?></h6>
 			<fieldset>
@@ -23,6 +26,7 @@
 					</div>
 				</div>
 			</fieldset>
+			<!--/ Component -->
 			
 			<!-- Database -->
 			<h6><?php echo lang_line('mod_setp2')?></h6>
@@ -129,6 +133,7 @@
 					<p class="text-center"><a class="btn btn-xs btn-round btn-default btn-add-field" id="5"><i class="fa fa-plus-circle"></i> <?php echo lang_line('button_add_field')?></a></p>
 				</div>
 			</fieldset>
+			<!--/ Database -->
 
 			<!-- Configuration -->
 			<h6><?php echo lang_line('mod_setp3')?></h6>
@@ -287,13 +292,13 @@
 															<div class="col-md-6">
 																<div class="form-group">
 																	<label><?php echo lang_line('label_conf_column_name');?></label>
-																	<input type="text" name="col[2][col_name]" class="form-control" minlength="4" required/>
+																	<input type="text" name="col[2][col_name]" class="form-control" minlength="2" required/>
 																</div>
 															</div>
 															<div class="col-md-6">
 																<div class="form-group">
 																	<label><?php echo lang_line('label_conf_field_data');?></label>
-																	<input type="text" name="col[2][col_field]" class="form-control" minlength="4" required/>
+																	<input type="text" name="col[2][col_field]" class="form-control" minlength="2" required/>
 																</div>
 															</div>
 														</div>
@@ -310,11 +315,73 @@
 									</td>
 								</tr>
 								<!--/ Column Datatable -->
+								
+								<!-- Frontend -->
+								<tr>
+									<td>
+										<br>
+										<div class="row">
+											<div class="col-md-3">
+												<p class="text-strong"><?php echo lang_line('label_conf_frontend')?></p>
+											</div>
+											<div class="col-md-9">
+												<div>
+													<div class="custom-checkbox checkbox-vertical">
+														<div class="checkbox">
+															<input type="checkbox" id="c-frontend" name="frontend[active]" value="1"/>
+															<label for="c-frontend"><span>Create element</span></label>
+														</div>
+													</div>
+												</div>
+												<br>
+												<!-- Meta Title -->
+												<div class="form-group">
+													<label>Meta Title</label>
+													<input type="text" name="frontend[meta_title]" class="form-control" placeholder="Ex : My Custom Title" style="max-width:300px;" required>
+												</div>
+												<!--/ Meta Title -->
+												<!-- Route Title -->
+												<div class="form-group">
+													<label>Route Title</label>
+													<input type="text" name="frontend[route]" id="route_title" class="form-control"  minlength="4" maxlength="20" placeholder="Ex : my-route" style="max-width:300px;" required>
+												</div>
+												<!--/ Route Title -->
+
+												<br>
+
+												<!-- Layout -->
+												<div class="form-group">
+													<label>Layout</label>
+													<div class="row">
+														<?php 
+															for($i=1; $i<=2; $i++): 
+																$lchecked = ( $i==1 ? 'checked':'');
+														?>	
+														<div class="col-sm-2">
+															<div class="custom-checkbox checkbox-vertical">
+																<div class="checkbox">
+																	<input type="radio" id="c-layout<?=$i;?>" name="frontend[layout]" value="<?=$i;?>" <?=$lchecked;?> />
+																	<label for="c-layout<?=$i;?>"><span><small>Layout <?=$i;?></small></span></label>
+																</div>
+															</div>
+															<img src="<?=content_url('images/layout'.$i.'.jpg');?>" alt="layout<?=$i;?>" style="max-width:100px;border:1px solid #ddd;">
+															<br>
+														</div>
+														<?php endfor ?>	
+													</div>
+												</div>
+												<!--/ Layout -->
+											</div>
+										</div>
+									</td>
+								</tr>
+								<!--/ Frontend -->
 							</table>
 						</div>
 					</div>
 				</div>
 			</fieldset>
+			<!--/ Configuration -->
 
 			<!-- Finish -->
 			<h6><?php echo lang_line('mod_setp4')?></h6>
@@ -323,6 +390,7 @@
 					<?php echo lang_line('mod_setp4_1')?> <a href="javascript:void(0)" class="show-modal-terms"><?php echo lang_line('mod_setp4_2')?></a>.
 				</div>
 			</fieldset>
+			<!--/ Finish -->
 		</form>
 	</div>
 </div>
@@ -349,7 +417,7 @@
 <div id="loads" class="co-loads" style="display:none;">
 	<div class="installing">
 		<p style="margin:0;">
-			<img class="mr-2" src="<?php echo site_url('content/images/loading.gif');?>"/>
+			<img class="mr-2" src="<?php echo content_url('images/loading.gif');?>"/>
 			<span>Process...</span>
 		</p>
 	</div>

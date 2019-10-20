@@ -4,7 +4,7 @@
 	Include Header Template
 ******************************************************* 
 -->
-<?php require_once('header.php'); ?>
+<?php $this->CI->render_view('header'); ?>
 <!-- End Header -->
 
 <!-- 
@@ -327,11 +327,11 @@
 					</div>
 				</div>
 
+				<!-- Include Sidebar -->
 				<div class="col-lg-4 nobottommargin col_last clearfix">
-					<!-- Include Sidebar -->
-					<?php require_once('sidebar.php'); ?>
-					<!--/ Include Sidebar -->
+					<?php $this->CI->render_view('sidebar'); ?>
 				</div>
+				<!--/ Include Sidebar -->
 			</div>
 		</div>
 	</div>
@@ -343,5 +343,5 @@
 	Include Footer Template
 ******************************************************* 
 -->
-<?php require_once('footer.php'); ?>
+<?php $this->CI->render_view('footer'); ?>
 <!-- End Footer -->

@@ -201,7 +201,7 @@ $('#publishtime').datetimepicker({
 
 $('#delpict').on('click',function(){
 	$('#picture').val('');
-	$('#imgprv').attr('src', site_url + 'content/images/noimage.jpg');
+	$('#imgprv').attr('src', content_url + '/images/noimage.jpg');
 });
 
 cfTnyMCE('#Content'); // load TnyMCE

@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-$lang['mod_title'] = 'Home Dashboard';
+$lang['mod_title'] = 'Dashboard';
 $lang['mod_visitors'] = 'Visitors';
 $lang['mod_welcome'] = 'Welcome to administrator page';
 $lang['mod_from'] = 'From';

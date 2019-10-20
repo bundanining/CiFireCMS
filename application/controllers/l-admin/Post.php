@@ -168,8 +168,20 @@ class Post extends Admin_controller {
 					$tags = '';
 					foreach ($tags_input_s as $tval) 
 					{
-						$tag_title = seotitle($tval,'');
-						$tags .= $tag_title.',';	
+						$tag_title = clean_tag($tval);
+						$tag_seotitle = seotitle($tval,'');
+
+						$this->load->model('mod/tag_model'); // Load tag_model
+						
+						if ( $this->tag_model->cek_seotitle($tag_seotitle) == TRUE )
+						{
+							$this->tag_model->insert(array(
+								'title' => $tag_title,
+								'seotitle' => $tag_seotitle
+							));
+						}
+
+						$tags .= $tag_seotitle.',';	
 					}
 					$tags = rtrim($tags, ',');
 					
@@ -265,8 +277,20 @@ class Post extends Admin_controller {
 						$tags = '';
 						foreach ( $tag_input_s as $tval ) 
 						{
-							$tag_title = seotitle($tval,'');
-							$tags .= $tag_title.',';	
+							$tag_title = clean_tag($tval);
+							$tag_seotitle = seotitle($tval,'');
+
+							$this->load->model('mod/tag_model'); // Load tag_model
+							
+							if ( $this->tag_model->cek_seotitle($tag_seotitle) == TRUE )
+							{
+								$this->tag_model->insert(array(
+									'title' => $tag_title,
+									'seotitle' => $tag_seotitle
+								));
+							}
+
+							$tags .= $tag_seotitle.',';	
 						}
 						$tags = rtrim($tags, ',');
 						

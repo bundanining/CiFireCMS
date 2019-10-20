@@ -19,12 +19,12 @@ class Menu {
 		if ( isset($_SESSION['lang_active']) )
 		{
 			$active_lang = $_SESSION['lang_active'];
-			require(APPPATH . 'language/' . $active_lang . '/main_lang.php');
+			require (APPPATH . 'language/' . $active_lang . '/main_lang.php');
 		}
 		else
 		{
 			$active_lang = seotitle($this->CI->settings->website('language'));
-			require(APPPATH . 'language/' . $active_lang . '/main_lang.php');
+			require (APPPATH . 'language/' . $active_lang . '/main_lang.php');
 		}
 		
 		$this->langMenu = $lang;
@@ -53,12 +53,16 @@ class Menu {
 				$pecah = explode('||', $row['class']);
 
 				if (count($pecah) < 2)
+				{
 					continue;
+				}
 
 				$a_class = 'class="'.trim($pecah[0]).'"';
 				
-				if ($pecah[0] == "null") 
+				if ($pecah[0] == "null")
+				{
 					$a_class = "";
+				}
 
 				$a_attr2 = trim($pecah[1]);
 				$a_attr2 = html_entity_decode($a_attr2);
@@ -131,13 +135,19 @@ class Menu {
 		if (isset($this->vardata[$parent])) 
 		{
 			if ($attr)
+			{
 				$attr = $attr;
+			}
 
 			if ($attrs)
+			{
 				$attrs = $attrs;
+			}
 
 			if ($attrss)
+			{
 				$attrss = $attrss;
+			}
 
 			$html = "\n$indent";
 			$html .= "<ul ".$attr.">";
@@ -149,10 +159,14 @@ class Menu {
 				$child = $this->ul($row['id'], $attrss);
 				$html .= "\n\t$indent";
 
-				if ($child) 
+				if ($child)
+				{
 					$html .= '<li '.$attrs.'>';
-				else 
+				}
+				else
+				{
 					$html .= '<li>';
+				}
 
 				$html .= $row['label'];
 
@@ -218,27 +232,39 @@ class Menu {
 				$i_class = $row['class'];
 			}
 
-			if ($row['parent_id'] == 0) 
-			{
-				$label = '<a href="' . $a_url . '" class="nav-link '.$a_class.'">';
-
-			} 
+			if ($row['class']=='header') {
+				$label = '<div class="text-uppercase font-size-xs line-height-xs">'.$title.'</div>';
+			}
 			else 
 			{
-				$label = '<a href="' . $a_url . '" class="nav-link '.$a_class.'">';
-			}
-			
-			if (!empty($row['class'])) 
-			{
-				$label .= '<i class="'.$i_class.'"></i> <span>'.$title.'</span>';
-			} 
-			else 
-			{
-				$label .= '<span>'.$title.'</span>';
+				if ($row['parent_id'] == 0) 
+				{
+					$label = '<a href="' . $a_url . '" class="nav-link '.$a_class.'">';
+
+				} 
+				else 
+				{
+					$label = '<a href="' . $a_url . '" class="nav-link '.$a_class.'">';
+				}
+				
+				if (!empty($row['class'])) 
+				{
+					$label .= '<i class="'.$i_class.'"></i> <span>'.$title.'</span>';
+				} 
+				else 
+				{
+					$label .= '<span>'.$title.'</span>';
+				}
+
+				$label .= '</a>';
 			}
 
-			$label .= '</a>';
-			$li_attr = 'class="nav-item"';
+
+			if ($row['class']=='header') {
+				$li_attr = 'class="nav-item-header"';
+			} else {
+				$li_attr = 'class="nav-item"';
+			}
 			$liblock = $row['url'];
 			$ultitle = $row['url'];
 			$this->add_row_dasboard($row['id'], $row['parent_id'], $li_attr, $label, $liblock, $ultitle);
@@ -262,14 +288,20 @@ class Menu {
 		
 		if (isset($this->vardata[$parent])) 
 		{
-			if ($attr)
+			if ($attr) 
+			{
 				$attr = $attr;
+			}
 
-			if ($attrs)
+			if ($attrs) 
+			{
 				$attrs = $attrs;
+			}
 
-			if ($attrss)
+			if ($attrss) 
+			{
 				$attrss = $attrss;
+			}
 
 			$html = "\n$indent";
 			$html .= '<ul '.$attr.' data-submenu-title="'.humanize($this->vardata[$parent][0]['ultitle']).'">';
@@ -282,9 +314,13 @@ class Menu {
 				$html .= "\n\t$indent";
 
 				if ($child) 
+				{
 					$html .= '<li class="nav-item nav-item-submenu " >';
+				}
 				else 
+				{
 					$html .= '<li '. $row['li_attr'] .' >';
+				}
 
 				$html .= $row['label'];
 
@@ -299,6 +335,7 @@ class Menu {
 			}
 
 			$html .= "\n$indent</ul>";
+			
 			return $html;
 		} 
 		else 

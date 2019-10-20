@@ -2,7 +2,6 @@
 <div id="container">
 	<div class="text-center">
 		<h2>Welcome To CiFireCMS Installation Page</h2>
-		<p>Version <?=build_version();?></p>
 	</div>
 	<div id="body">
 		<div class="license">

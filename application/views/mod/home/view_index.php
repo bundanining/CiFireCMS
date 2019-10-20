@@ -1,5 +1,4 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');?>
-
 <div class="page-header page-header-light">
 	<div class="page-header-content header-elements-inline">
 		<div class="page-title">
@@ -45,7 +44,7 @@
 				<div class="media">
 					<div class="mr-3">
 						<a href="<?php echo admin_url('post');?>" class="home-widget-icon">
-							<i class="fa fa-newspaper-o"></i>
+							<i class="icon-book2"></i>
 						</a>
 					</div>
 					<div class="media-body">
@@ -55,12 +54,12 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-lg-3 home-widget info">
+		<div class="col-lg-3 home-widget success">
 			<div class="card card-body">
 				<div class="media">
 					<div class="mr-3">
 						<a href="<?php echo admin_url('category');?>" class="home-widget-icon">
-							<i class="fa fa-folder-open"></i>
+							<i class="fa fa-folder-open-o"></i>
 						</a>
 					</div>
 					<div class="media-body">
@@ -70,12 +69,12 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-lg-3 home-widget success">
+		<div class="col-lg-3 home-widget warning">
 			<div class="card card-body">
 				<div class="media">
 					<div class="mr-3">
 						<a href="<?php echo admin_url('tag');?>" class="home-widget-icon">
-							<i class="fa fa-tags"></i>
+							<i class="icon-price-tags2"></i>
 						</a>
 					</div>
 					<div class="media-body">
@@ -85,12 +84,12 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-lg-3 home-widget warning">
+		<div class="col-lg-3 home-widget danger">
 			<div class="card card-body">
 				<div class="media">
 					<div class="mr-3">
 						<a href="<?php echo admin_url('pages');?>" class="home-widget-icon">
-							<i class="fa fa-file-text"></i>
+							<i class="icon-file-text2"></i>
 						</a>
 					</div>
 					<div class="media-body">
@@ -100,12 +99,12 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-lg-3 home-widget danger">
+		<div class="col-lg-3 home-widget secondary">
 			<div class="card card-body">
 				<div class="media">
 					<div class="mr-3">
 						<a href="<?php echo admin_url('component');?>" class="home-widget-icon">
-							<i class="fa fa-puzzle-piece"></i>
+							<i class="icon-cube3"></i>
 						</a>
 					</div>
 					<div class="media-body">
@@ -115,7 +114,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-lg-3 home-widget secondary">
+		<div class="col-lg-3 home-widget danger">
 			<div class="card card-body">
 				<div class="media">
 					<div class="mr-3">
@@ -130,12 +129,12 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-lg-3 home-widget purple">
+		<div class="col-lg-3 home-widget info">
 			<div class="card card-body">
 				<div class="media">
 					<div class="mr-3">
 						<a href="<?php echo admin_url('mail');?>" class="home-widget-icon">
-							<i class="fa fa-envelope"></i>
+							<i class="icon-envelop2"></i>
 						</a>
 					</div>
 					<div class="media-body">
@@ -145,12 +144,12 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-lg-3 home-widget brown">
+		<div class="col-lg-3 home-widget success">
 			<div class="card card-body">
 				<div class="media">
 					<div class="mr-3">
 						<a href="<?php echo admin_url('user');?>" class="home-widget-icon">
-							<i class="fa fa-users"></i>
+							<i class="icon-users4"></i>
 						</a>
 					</div>
 					<div class="media-body">

@@ -2,9 +2,7 @@
 <div class="page-header page-header-light">
 	<div class="page-header-content header-elements-inline">
 		<div class="page-title">
-			<h3>
-				<span class="font-weight-semibold"><?=lang_line('mod_title'); ?></span>
-			</h3>
+			<h3><span class="font-weight-semibold"><?=lang_line('mod_title'); ?></span></h3>
 		</div>
 	</div>
 	<div class="breadcrumb-line breadcrumb-line-light">
@@ -24,6 +22,9 @@
 	<div class="block">
 		<div class="block-header">
 			<h3><?=lang_line('mod_title_edit');?></h3>
+			<div class="pull-right">
+				<a href="<?php echo admin_url($this->mod);?>" class="button btn-default btn-sm"><i class="icon-arrow-left7 "></i> <?php echo lang_line('button_back');?></a>
+			</div>
 		</div>
 		<div class="row">
 			<div class="col-md-12">

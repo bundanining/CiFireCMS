@@ -225,7 +225,7 @@ $(".close-preview2").click(function(){
 
 $(".close-preview").click(function(){
 	$(this).hide();
-	var resimg = site_url+'content/images/avatar.jpg';
+	var resimg = content_url + '/images/avatar.jpg';
     $('#image-preview').attr('src', resimg);
     $('#upload-image').val('');
 });

@@ -4,7 +4,7 @@
 	Include Header Template
 ******************************************************* 
 -->
-<?php require_once('header.php'); ?>
+<?php $this->CI->render_view('header'); ?>
 <!-- End Header -->
 
 <!-- 
@@ -81,7 +81,7 @@
 					<!-- Content Box 1 -->
 					<div class="col_full bottommargin-lg clearfix">
 						<?php
-							$catPost1 = $this->CI->index_model->get_category_by('seotitle', 'travel', 'row');
+							$catPost1 = $this->CI->index_model->get_category_by('id', 2, 'row');
 						?>
 						<div class="fancy-title title-border">
 							<h3><?php echo $catPost1['title'];?></h3>
@@ -149,7 +149,7 @@
 					<!-- Content Box 2 -->
 					<div class="col_full bottommargin-lg clearfix">
 						<?php
-							$catPost2 = $this->CI->index_model->get_category_by('seotitle', 'life', 'row');
+							$catPost2 = $this->CI->index_model->get_category_by('id', 3, 'row');
 						?>
 						<div class="fancy-title title-border">
 							<h3><?php echo $catPost2['title']?></h3>
@@ -214,7 +214,7 @@
 					<!-- Content Box 3 -->
 					<div class="col_full nobottommargin clearfix">
 						<?php
-							$catPost3 = $this->CI->index_model->get_category_by('seotitle', 'tekno', 'row');
+							$catPost3 = $this->CI->index_model->get_category_by('id', 4, 'row');
 						?>
 						<div class="fancy-title title-border">
 							<h3><?php echo $catPost3['title']?></h3>
@@ -257,7 +257,7 @@
 				
 				<div class="col-lg-4">
 					<!-- Include Sidebar -->
-					<?php require_once('sidebar.php'); ?>
+					<?php $this->CI->render_view('sidebar'); ?>
 					<!--/ Include Sidebar -->
 				</div>
 			</div>
@@ -271,5 +271,5 @@
 	Include Footer Template
 ******************************************************* 
 -->
-<?php require_once('footer.php'); ?>
+<?php $this->CI->render_view('footer'); ?>
 <!-- End Footer -->

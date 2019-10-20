@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 26, 2019 at 01:42 PM
--- Server version: 10.1.40-MariaDB
+-- Generation Time: Oct 15, 2019 at 09:46 AM
+-- Server version: 5.7.26
 -- PHP Version: 7.3.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -212,58 +212,61 @@ CREATE TABLE `t_menu` (
 --
 
 INSERT INTO `t_menu` (`id`, `parent_id`, `title`, `url`, `class`, `position`, `group_id`, `active`) VALUES
-(1, 0, 'Home Dashboard', 'home', 'fa fa-home', 1, 1, 'Y'),
-(2, 0, 'Post', 'post', 'fa fa-newspaper-o', 2, 1, 'Y'),
-(3, 2, 'All Post', 'post', '', 1, 1, 'Y'),
-(4, 2, 'Add New', 'post/add-new', '', 2, 1, 'Y'),
-(5, 0, 'Category', 'category', 'fa fa-folder-o', 3, 1, 'Y'),
-(6, 5, 'All Category', 'category', '', 1, 1, 'Y'),
-(7, 5, 'Add New', 'category/add-new', '', 2, 1, 'Y'),
-(8, 0, 'Tag', 'tag', 'fa fa-tags', 4, 1, 'Y'),
-(9, 0, 'Comment', 'comment', 'fa fa-comments-o', 5, 1, 'Y'),
-(10, 0, 'Pages', 'pages', 'fa fa-file-text-o', 6, 1, 'Y'),
-(11, 10, 'All Pages', 'pages', '', 1, 1, 'Y'),
-(12, 10, 'Add New', 'pages/add-new', '', 2, 1, 'Y'),
-(19, 0, 'Menu Manager', 'menumanager/?', 'fa fa-sitemap', 13, 1, 'Y'),
-(20, 0, 'User', 'user', 'fa fa-users', 10, 1, 'Y'),
-(21, 20, 'All User', 'user', '', 1, 1, 'Y'),
-(22, 20, 'Add New', 'user/add-new', '', 2, 1, 'Y'),
-(23, 20, 'Level', 'user/level', '', 3, 1, 'Y'),
-(24, 0, 'Setting', 'setting', 'fa fa-gear', 14, 1, 'Y'),
-(25, 0, 'Theme', 'theme', 'fa fa-paint-brush', 15, 1, 'Y'),
-(26, 0, 'File Manager', '', 'fa fa-th || browse-files', 8, 1, 'N'),
-(27, 0, 'Mail', 'mail', 'fa fa-envelope', 11, 1, 'Y'),
-(28, 0, 'Gallery', 'gallery', 'fa fa-image', 7, 1, 'Y'),
-(29, 0, 'Home', 'home', 'fa fa-home', 1, 3, 'Y'),
-(51, 0, 'File Manager', 'filemanager', 'fa fa-th', 9, 1, 'Y'),
-(55, 0, 'Home Dashboard', 'home', 'fa fa-home', 1, 2, 'Y'),
-(81, 0, 'Post', 'post', 'fa fa-newspaper-o', 2, 2, 'Y'),
-(82, 81, 'All Post', 'post', '', 1, 2, 'Y'),
-(83, 81, 'Add New', 'post/add-new', '', 2, 2, 'Y'),
-(84, 0, 'Category', 'category', 'fa fa-folder-o', 3, 2, 'Y'),
-(85, 84, 'All Category', 'category', '', 1, 2, 'Y'),
-(86, 84, 'Add New', 'category/add-new', '', 2, 2, 'Y'),
+(1, 0, 'Dashboard', 'home', 'fa fa-home', 3, 1, 'Y'),
+(2, 0, 'Post', 'post', 'icon-book2', 5, 1, 'Y'),
+(5, 0, 'Category', 'category', 'fa fa-folder-open-o', 6, 1, 'Y'),
+(8, 0, 'Tag', 'tag', 'icon-price-tags2', 7, 1, 'Y'),
+(9, 0, 'Comment', 'comment', 'icon-bubble9', 8, 1, 'Y'),
+(10, 0, 'Pages', 'pages', 'icon-file-text2', 9, 1, 'Y'),
+(19, 0, 'Menu Manager', 'menumanager/?', 'icon-list ', 23, 1, 'Y'),
+(20, 0, 'Users', 'user', 'icon-users2', 16, 1, 'Y'),
+(23, 0, 'Level', 'user/level', 'icon-medal2 ', 17, 1, 'Y'),
+(24, 0, 'Setting', 'setting', 'fa fa-gear', 24, 1, 'Y'),
+(25, 0, 'Theme', 'theme', 'icon-shutter ', 22, 1, 'Y'),
+(27, 0, 'Mail', 'mail', 'icon-envelop2', 14, 1, 'Y'),
+(28, 0, 'Gallery', 'gallery', 'icon-images2 ', 11, 1, 'Y'),
+(29, 0, 'Dashboard', 'home', 'fa fa-home', 2, 3, 'Y'),
+(51, 0, 'File Manager', 'filemanager', 'icon-grid-alt', 12, 1, 'Y'),
+(55, 0, 'Dashboard', 'home', 'fa fa-home', 2, 2, 'Y'),
+(81, 0, 'Post', 'post', 'icon-book2', 4, 2, 'Y'),
+(84, 0, 'Category', 'category', 'fa fa-folder-open-o', 5, 2, 'Y'),
 (87, 0, 'Home', 'home', '', 1, 4, 'Y'),
 (88, 0, 'Life', 'category/life', '', 2, 4, 'Y'),
 (89, 0, 'Travel', 'category/travel', '', 3, 4, 'Y'),
 (90, 0, 'Tekno', 'category/tekno', '', 4, 4, 'Y'),
-(91, 0, 'Tag', 'tag', 'fa fa-tags', 4, 2, 'Y'),
-(92, 0, 'Comment', 'comment', 'fa fa-comments-o', 5, 2, 'Y'),
-(93, 0, 'Pages', 'pages', 'fa fa-file-text-o', 6, 2, 'Y'),
-(94, 0, 'Gallery', 'gallery', 'fa fa-image', 7, 2, 'Y'),
-(95, 0, 'Mail', 'mail', 'fa fa-envelope', 8, 2, 'Y'),
-(96, 0, 'User', 'user', 'fa fa-users', 9, 2, 'Y'),
-(98, 0, 'File Manager', 'filemanager', 'fa fa-th', 10, 2, 'Y'),
+(91, 0, 'Tag', 'tag', 'icon-price-tags2', 6, 2, 'Y'),
+(92, 0, 'Comment', 'comment', 'icon-bubble9', 7, 2, 'Y'),
+(93, 0, 'Pages', 'pages', 'icon-file-text2', 8, 2, 'Y'),
+(94, 0, 'Gallery', 'gallery', 'icon-images2', 10, 2, 'Y'),
+(95, 0, 'Mail', 'mail', 'icon-envelop2', 13, 2, 'Y'),
+(96, 0, 'User', 'user', 'icon-users2', 15, 2, 'Y'),
+(98, 0, 'File Manager', 'filemanager', 'icon-grid-alt', 11, 2, 'Y'),
 (99, 88, 'Health', 'category/health', '', 1, 4, 'Y'),
 (100, 0, 'Entertainment', 'category/entertainment', '', 5, 4, 'Y'),
 (101, 0, 'Gallery', 'gallery', '', 6, 4, 'Y'),
-(102, 0, 'Post', 'post', 'fa fa-newspaper-o', 2, 3, 'Y'),
-(103, 0, 'Category', 'category', 'fa fa-folder-o', 3, 3, 'Y'),
-(104, 0, 'Tag', 'tag', 'fa fa-tags', 4, 3, 'Y'),
-(105, 0, 'Gallery', 'gallery', 'fa fa-image', 5, 3, 'Y'),
-(106, 0, 'Component', 'component', 'fa fa-cubes', 12, 1, 'Y'),
-(107, 0, 'Comment', 'comment', 'fa fa-comments-o', 7, 3, 'Y'),
-(108, 0, 'Index', 'index', '', 7, 4, 'Y');
+(102, 0, 'Post', 'post', 'icon-book2', 4, 3, 'Y'),
+(103, 0, 'Category', 'category', 'fa fa-folder-o', 5, 3, 'Y'),
+(104, 0, 'Tag', 'tag', 'icon-price-tags2', 6, 3, 'Y'),
+(105, 0, 'Gallery', 'gallery', 'icon-images2 ', 9, 3, 'Y'),
+(106, 0, 'Component', 'component', 'icon-cube3', 19, 1, 'Y'),
+(107, 0, 'Index', 'index', '', 7, 4, 'Y'),
+(108, 0, 'Comment', 'comment', 'icon-bubble9', 7, 3, 'Y'),
+(109, 0, 'DASHBOARD', '#', 'header', 1, 1, 'Y'),
+(110, 0, 'CONTENT', '#', 'header', 4, 1, 'Y'),
+(111, 0, 'MEDIA', '#', 'header', 10, 1, 'Y'),
+(112, 0, 'USER', '#', 'header', 15, 1, 'Y'),
+(113, 0, 'CONTACT', '#', 'header', 13, 1, 'Y'),
+(114, 0, 'APPEARANCE', '#', 'header', 21, 1, 'Y'),
+(115, 0, 'COMPONENT', '#', 'header', 18, 1, 'Y'),
+(116, 0, 'CompoGen', 'compogen', 'icon-cup2', 20, 1, 'Y'),
+(117, 0, 'DASHBOARD', '#', 'header', 1, 2, 'Y'),
+(118, 0, 'CONTENT', '#', 'header', 3, 2, 'Y'),
+(119, 0, 'MEDIA', '#', 'header', 9, 2, 'Y'),
+(120, 0, 'USER', '#', 'header', 14, 2, 'Y'),
+(121, 0, 'CONTACT', '#', 'header', 12, 2, 'Y'),
+(122, 0, 'DASHBOARD', '#', 'header', 1, 3, 'Y'),
+(123, 0, 'CONTENT', '#', 'header', 3, 3, 'Y'),
+(124, 0, 'MEDIA', '#', 'header', 8, 3, 'Y');
 
 -- --------------------------------------------------------
 
@@ -282,10 +285,10 @@ CREATE TABLE `t_menu_group` (
 --
 
 INSERT INTO `t_menu_group` (`id`, `title`) VALUES
-(1, 'Menu SU'),
-(2, 'Menu Admin'),
-(3, 'Menu User'),
-(4, 'Menu Web');
+(1, 'Dashboard Super Admin'),
+(2, 'Dashboard Admin'),
+(3, 'Dashboard User'),
+(4, 'Web');
 
 -- --------------------------------------------------------
 
@@ -330,7 +333,7 @@ CREATE TABLE `t_post` (
   `timepost` time NOT NULL,
   `picture` text NOT NULL,
   `image_caption` text NOT NULL,
-  `hits` int(10) NOT NULL DEFAULT '0',
+  `hits` int(50) NOT NULL DEFAULT '0',
   `headline` enum('N','Y') NOT NULL DEFAULT 'N',
   `comment` enum('N','Y') NOT NULL DEFAULT 'Y',
   `active` enum('N','Y','-1') NOT NULL DEFAULT 'N',
@@ -342,17 +345,17 @@ CREATE TABLE `t_post` (
 --
 
 INSERT INTO `t_post` (`id`, `id_category`, `id_user`, `tag`, `title`, `seotitle`, `content`, `datepost`, `timepost`, `picture`, `image_caption`, `hits`, `headline`, `comment`, `active`) VALUES
-(1, 2, 1, 'bellyaerobic,langsing,tips,artikel', 'Bikin Langsing dan Kencang Dalam Sebulan, Belly Aerobic Ini Wajib Kamu Coba', 'bikin-langsing-dan-kencang-dalam-sebulan-belly-aerobic-ini-wajib-kamu-coba', '&lt;p style=&quot;text-align: justify;&quot;&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum&lt;/p&gt;\r\n&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Excepteur sint occaecat cupidatat non proident&lt;/strong&gt;&lt;/p&gt;\r\n&lt;p style=&quot;text-align: justify;&quot;&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum&lt;/p&gt;\r\n&lt;blockquote&gt;\r\n&lt;p&gt;Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat&lt;/p&gt;\r\n&lt;/blockquote&gt;\r\n&lt;p style=&quot;text-align: justify;&quot;&gt;Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum&lt;/p&gt;', '2018-01-22', '05:17:56', 'ber-belly-aerobic-ria.jpg', 'ber-belly aerobic ria via http://primavit.club', 0, 'Y', 'Y', 'Y'),
-(2, 3, 1, 'pantaipink,lombok,wisata,artikel', 'Pesona Romantis Pantai Pink Lombok', 'pesona-romantis-pantai-pink-lombok', '&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliquaUt enim ad minim veniam, quis nostrud exercita tion ullamco laboris nisi ut aliquip ex ea commodo consequat oluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum&lt;/p&gt;\r\n&lt;p&gt;Lorem ipsum dolor sit amet con sectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliquaUt enim ad minim veniam, quis nostrud exerc itation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehen derit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.&lt;/p&gt;\r\n&lt;p&gt;Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laboru uis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum&lt;/p&gt;\r\n&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliquaUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum&lt;/p&gt;', '2018-03-15', '10:26:55', 'pantai-pink-lombok.jpg', '', 0, 'Y', 'Y', 'Y'),
-(3, 2, 1, 'artikel,tips', 'Suka Gaya Rambut Berponi? 5 Tips Ini Akan Membuat Penampilanmu Jadi Makin Kece', 'suka-gaya-rambut-berponi-5-tips-ini-akan-membuat-penampilanmu-jadi-makin-kece', '&lt;p&gt;Lorem ipsum dolor sit amet consec tetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliquaUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum m, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum&lt;/p&gt;\r\n&lt;p&gt;Roccaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum m, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum&lt;/p&gt;\r\n&lt;p&gt;Er in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum m, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum&lt;/p&gt;', '2018-04-28', '03:13:02', 'Yoon-Eun-Hye.jpg', 'Yoon Eun Hye', 0, 'Y', 'Y', 'Y'),
-(4, 4, 1, 'artikel', 'Fosil Langka Burung Dodo', 'fosil-langka-burung-dodo', '&lt;p style=&quot;text-align: justify;&quot;&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliquat enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat sunt in culpa qui officia deserunt mollit anim id est laborum velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia henderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proide&lt;/p&gt;\r\n&lt;p style=&quot;text-align: justify;&quot;&gt;Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa nderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat&lt;/p&gt;', '2018-05-04', '09:32:32', 'burung-dodo.jpg', 'Burung Dodo', 0, 'N', 'Y', 'Y'),
-(5, 4, 1, 'artikel,microsoft,billgates', 'Pendiri Microsoft, salah satu orang terkaya di Dunia', 'pendiri-microsoft-salah-satu-orang-terkaya-di-dunia', '&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliquaUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum&lt;/p&gt;\r\n&lt;p&gt;Reniam, quis nostrud exercitation ullamco laboris&amp;nbsp; nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum&lt;/p&gt;\r\n&lt;p&gt;Tim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con sequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum&lt;/p&gt;', '2018-06-10', '20:15:15', 'bill-gates.jpg', 'Bill Gates', 0, 'Y', 'Y', 'Y'),
-(6, 4, 1, 'artikel,microsoft,soni,game', 'Sony dan Microsoft Kerja Sama Kembangkan Game', 'sony-dan-microsoft-kerja-sama-kembangkan-game', '&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliquaUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum&lt;/p&gt;\r\n&lt;p&gt;Rolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliquaUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum&lt;/p&gt;\r\n&lt;p&gt;Ulor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliquaUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum&lt;/p&gt;', '2018-07-12', '10:06:49', 'xbx-ps.jpg', '', 0, 'N', 'Y', 'Y'),
-(7, 3, 1, 'artikel,pulocinta', 'Pulo Cinta, Destinasi Kekinian yang Lebih Indah dari Maldives', 'pulo-cinta-destinasi-kekinian-yang-lebih-indah-dari-maldives', '&lt;p style=&quot;text-align: justify;&quot;&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliquaUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum&lt;/p&gt;\r\n&lt;p style=&quot;text-align: justify;&quot;&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliquaUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.&lt;/p&gt;\r\n&lt;p style=&quot;text-align: justify;&quot;&gt;Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliquaU t Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliquaUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum&lt;/p&gt;', '2018-08-19', '10:18:23', 'pulo-cinta.jpg', '', 0, 'N', 'Y', 'Y'),
-(8, 6, 1, 'artikel', 'Kata Peneliti, Cabai Itu Ternyata Resep Rahasia Untuk Panjang Umur', 'kata-peneliti-cabai-itu-ternyata-resep-rahasia-untuk-panjang-umur', '&lt;p&gt;Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliquaUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum&lt;/p&gt;\r\n&lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum r adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliquaUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor&lt;/p&gt;\r\n&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliquaUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum&lt;/p&gt;', '2018-09-17', '12:32:38', 'cabe-merah.jpg', '', 0, 'N', 'Y', 'Y'),
-(9, 3, 1, 'artikel,sulawesiutara,kotabunga,wisata,tomohon', 'Destinasi Wisata Kota Bunga Tomohon Sulawesi Utara', 'destinasi-wisata-kota-bunga-tomohon-sulawesi-utara', '&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliquaUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum&lt;/p&gt;\r\n&lt;p&gt;Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliquaUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum&lt;/p&gt;\r\n&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliquaUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum&lt;/p&gt;', '2018-10-07', '12:58:40', 'kota-bunga-tomohon.jpg', '', 0, 'Y', 'Y', 'Y'),
-(10, 3, 1, 'artikel,pulauharapan', 'Pulau Harapan, Eksotisme dan Pesona Wisata Bahari Pulau Seribu', 'pulau-harapan-eksotisme-dan-pesona-wisata-bahari-pulau-seribu', '&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua&lt;/p&gt;\r\n&lt;p&gt;Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequ atuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culp&lt;/p&gt;\r\n&lt;blockquote&gt;Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat&lt;/blockquote&gt;\r\n&lt;p&gt;&amp;nbsp;&lt;/p&gt;\r\n&lt;p style=&quot;text-align: center;&quot;&gt;&lt;iframe src=&quot;//www.youtube.com/embed/kzNSiVdD0jU&quot; width=&quot;560&quot; height=&quot;315&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;\r\n&lt;p&gt;&amp;nbsp;&lt;/p&gt;\r\n&lt;p&gt;Oelit esse cillum dolore eu fugiat nulla pariatur xcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum oluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum oluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum&lt;/p&gt;', '2018-11-14', '13:08:18', 'wisata-pulau-harapan.jpg', '', 0, 'N', 'Y', 'Y'),
-(11, 3, 1, 'artikel', 'Wisata Favorit Traveler Buat Lihat Salju di Melbourne Ternyata Banyak yang Seru Loh', 'wisata-favorit-traveler-buat-lihat-salju-di-melbourne-ternyata-banyak-yang-seru-loh', '&lt;p style=&quot;text-align: justify;&quot;&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua t esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proid t esse cillum dolore eu fugiat nulla pariatur&lt;/p&gt;\r\n&lt;p style=&quot;text-align: justify;&quot;&gt;laboris nisi ut aliquip ex ea commodo consequat ate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mol ate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mol derit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia des&lt;/p&gt;\r\n&lt;p style=&quot;text-align: justify;&quot;&gt;Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proid t esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proidostrud exercitation ullamco laboris nisi ut aliquip ex. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit an&lt;/p&gt;', '2018-12-25', '09:25:30', 'wisata-salju.jpg', 'Lorem ipsum dolor sit amet consectetur', 0, 'N', 'Y', 'Y');
+(1, 2, 1, 'eiusmod,lorem,dolor', 'Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit Sed Eiusmod 11', 'lorem-ipsum-dolor-sit-amet-consectetur-adipisicing-elit-sed-eiusmod-11', '&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua t esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proid t esse cillum dolore eu fugiat nulla pariatur&lt;/p&gt;\r\n&lt;p&gt;laboris nisi ut aliquip ex ea commodo consequat ate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mol ate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mol derit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia&lt;/p&gt;', '2019-01-22', '05:17:56', 'image11.jpg', '', 0, 'Y', 'Y', 'Y'),
+(2, 3, 1, 'lorem,sed,eiusmod,consectetur', 'Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit Sed Eiusmod 10', 'lorem-ipsum-dolor-sit-amet-consectetur-adipisicing-elit-sed-eiusmod-10', '&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua t esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proid t esse cillum dolore eu fugiat nulla pariatur&lt;/p&gt;\r\n&lt;p&gt;laboris nisi ut aliquip ex ea commodo consequat ate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mol ate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mol derit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia&lt;/p&gt;', '2017-05-16', '10:26:55', 'image10.jpg', '', 0, 'Y', 'Y', 'Y'),
+(4, 2, 1, 'lorem,sed,elit,consectetur,amet,dolor', 'Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit Sed Eiusmod 9', 'lorem-ipsum-dolor-sit-amet-consectetur-adipisicing-elit-sed-eiusmod-9', '&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua t esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proid t esse cillum dolore eu fugiat nulla pariatur&lt;/p&gt;\r\n&lt;p&gt;laboris nisi ut aliquip ex ea commodo consequat ate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mol ate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mol derit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia&lt;/p&gt;', '2019-05-24', '03:13:02', 'image09.jpg', '', 0, 'Y', 'Y', 'Y'),
+(5, 4, 1, 'lorem,eiusmod,consectetur,amet', 'Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit Sed Eiusmod 8', 'lorem-ipsum-dolor-sit-amet-consectetur-adipisicing-elit-sed-eiusmod-8', '&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua t esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proid t esse cillum dolore eu fugiat nulla pariatur&lt;/p&gt;\r\n&lt;p&gt;laboris nisi ut aliquip ex ea commodo consequat ate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mol ate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mol derit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia&lt;/p&gt;', '2019-05-24', '09:32:32', 'image08.jpg', '', 0, 'N', 'Y', 'Y'),
+(6, 4, 1, 'lorem,dolor,consectetur,eiusmod', 'Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit Sed Eiusmod 7', 'lorem-ipsum-dolor-sit-amet-consectetur-adipisicing-elit-sed-eiusmod-7', '&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua t esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proid t esse cillum dolore eu fugiat nulla pariatur&lt;/p&gt;\r\n&lt;p&gt;laboris nisi ut aliquip ex ea commodo consequat ate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mol ate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mol derit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia&lt;/p&gt;', '2019-05-24', '20:15:15', 'image07.jpg', '', 0, 'Y', 'Y', 'Y'),
+(7, 4, 1, 'lorem,eiusmod,consectetur,dolor', 'Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit Sed Eiusmod 6', 'lorem-ipsum-dolor-sit-amet-consectetur-adipisicing-elit-sed-eiusmod-6', '&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua t esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proid t esse cillum dolore eu fugiat nulla pariatur&lt;/p&gt;\r\n&lt;p&gt;laboris nisi ut aliquip ex ea commodo consequat ate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mol ate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mol derit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia&lt;/p&gt;', '2019-05-24', '10:06:49', 'image06.jpg', '', 0, 'Y', 'Y', 'Y'),
+(8, 3, 1, 'lorem,sed,elit,consectetur,eiusmod,amet,dolor', 'Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit Sed Eiusmod 5', 'lorem-ipsum-dolor-sit-amet-consectetur-adipisicing-elit-sed-eiusmod-5', '&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua t esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proid t esse cillum dolore eu fugiat nulla pariatur&lt;/p&gt;\r\n&lt;p&gt;laboris nisi ut aliquip ex ea commodo consequat ate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mol ate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mol derit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia&lt;/p&gt;', '2019-05-24', '10:18:23', 'image05.jpg', '', 0, 'N', 'Y', 'Y'),
+(9, 6, 1, 'lorem,sed,consectetur,amet', 'Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit Sed Eiusmod 4', 'lorem-ipsum-dolor-sit-amet-consectetur-adipisicing-elit-sed-eiusmod-4', '&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua t esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proid t esse cillum dolore eu fugiat nulla pariatur&lt;/p&gt;\r\n&lt;p&gt;laboris nisi ut aliquip ex ea commodo consequat ate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mol ate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mol derit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia&lt;/p&gt;', '2019-05-24', '12:32:38', 'image04.jpg', '', 0, 'Y', 'Y', 'Y'),
+(10, 3, 1, 'lorem,consectetur,sed,amet', 'Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit Sed Eiusmod 3', 'lorem-ipsum-dolor-sit-amet-consectetur-adipisicing-elit-sed-eiusmod-3', '&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua t esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proid t esse cillum dolore eu fugiat nulla pariatur&lt;/p&gt;\r\n&lt;p&gt;laboris nisi ut aliquip ex ea commodo consequat ate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mol ate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mol derit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia&lt;/p&gt;', '2019-05-24', '12:58:40', 'image03.jpg', '', 0, 'Y', 'Y', 'Y'),
+(11, 3, 1, 'dolor,adipisicing,eiusmod,lorem,consectetur', 'Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit Sed Eiusmod 2', 'lorem-ipsum-dolor-sit-amet-consectetur-adipisicing-elit-sed-eiusmod-2', '&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua t esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proid t esse cillum dolore eu fugiat nulla pariatur&lt;/p&gt;\r\n&lt;p&gt;laboris nisi ut aliquip ex ea commodo consequat ate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mol ate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mol derit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia&lt;/p&gt;', '2019-05-24', '13:08:18', 'image02.jpg', '', 0, 'N', 'Y', 'Y'),
+(12, 3, 1, 'lorem,adipisicing,sed,consectetur,sit', 'Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit Sed Eiusmod 1', 'lorem-ipsum-dolor-sit-amet-consectetur-adipisicing-elit-sed-eiusmod-1', '&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua t esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proid t esse cillum dolore eu fugiat nulla pariatur&lt;/p&gt;\r\n&lt;p&gt;laboris nisi ut aliquip ex ea commodo consequat ate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mol ate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mol derit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia&lt;/p&gt;', '2019-05-24', '09:25:30', 'image01.jpg', '', 0, 'N', 'Y', 'Y');
 
 -- --------------------------------------------------------
 
@@ -362,8 +365,8 @@ INSERT INTO `t_post` (`id`, `id_category`, `id_user`, `tag`, `title`, `seotitle`
 DROP TABLE IF EXISTS `t_setting`;
 CREATE TABLE `t_setting` (
   `id` int(100) NOT NULL AUTO_INCREMENT,
-  `groups` varchar(100) NOT NULL,
-  `options` varchar(100) NOT NULL,
+  `groups` varchar(200) NOT NULL,
+  `options` varchar(200) NOT NULL,
   `value` text NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -376,8 +379,8 @@ CREATE TABLE `t_setting` (
 DROP TABLE IF EXISTS `t_slug`;
 CREATE TABLE `t_slug` (
   `id` int(100) NOT NULL AUTO_INCREMENT,
-  `title` varchar(50) NOT NULL,
-  `slug` varchar(100) NOT NULL,
+  `title` varchar(100) NOT NULL,
+  `slug` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -410,22 +413,16 @@ CREATE TABLE `t_tag` (
 --
 
 INSERT INTO `t_tag` (`id`, `title`, `seotitle`) VALUES
-(1, 'Pantai Pink', 'pantaipink'),
-(2, 'Lombok', 'lombok'),
-(3, 'Langsing', 'langsing'),
-(4, 'Belly Aerobic', 'bellyaerobic'),
-(5, 'Artikel', 'artikel'),
-(6, 'Pulau Harapan', 'pulauharapan'),
-(7, 'Tomohon', 'tomohon'),
-(8, 'Kota Bunga', 'kotabunga'),
-(9, 'Sulawesi Utara', 'sulawesiutara'),
-(10, 'Wisata', 'wisata'),
-(11, 'Pulo Cinta', 'pulocinta'),
-(12, 'Microsoft', 'microsoft'),
-(13, 'Soni', 'soni'),
-(14, 'Game', 'game'),
-(15, 'Bill Gates', 'billgates'),
-(16, 'Tips', 'tips');
+(18, 'Lorem', 'lorem'),
+(19, 'Ipsum', 'ipsum'),
+(20, 'Dolor', 'dolor'),
+(21, 'Sit', 'sit'),
+(22, 'Amet', 'amet'),
+(23, 'Consectetur', 'consectetur'),
+(24, 'Adipisicing', 'adipisicing'),
+(25, 'Elit', 'elit'),
+(26, 'Eiusmod', 'eiusmod'),
+(27, 'Sed', 'sed');
 
 -- --------------------------------------------------------
 

@@ -48,6 +48,7 @@ $("#DataTable").DataTable({
 			}
 		});
 
+		/*
 		$('.mail_detail').click(function() {
 			var id_data = $(this).attr('id');
 			var h_name = $(this).attr('h-name');
@@ -58,21 +59,22 @@ $("#DataTable").DataTable({
 
 			$('#modal_view').modal('show');
 			
-			$('.mail_content').html('<center><img src="'+site_url+'/content/images/loading.gif" style="display:table;margin:auto;"></center>');
+			$('.mail_content').html('<center><img src="' + content_url + '/images/loading.gif" style="display:table;margin:auto;"></center>');
 
 			$.ajax({
 				type:'POST',
-				url:window.location.href+'/mail_detail/',
+				url:window.location.href + '/mail_detail/',
 				data:'id='+id_data,
 				success: function(data){    
 					var res = data;
-					$('.mail_content').html('<div><h4>'+res.subject+'</h4><hr>'+res.content+'</div>');                        
+					$('.mail_content').html('<div><h4>' + res.subject + '</h4><hr>' + res.content + '</div>');                        
 					$('#mico-'+id_data).removeClass('text-success');
 					$('#mico-'+id_data).addClass('text-muted');
 					$('#mico-'+id_data).html('<i class="fa fa-envelope-o"></i>');
 				}
 			});
 		});
+		*/
 	},
 });
 

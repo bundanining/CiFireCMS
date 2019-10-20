@@ -111,9 +111,6 @@
 								<div id="collapsedTags" class="collapse" aria-labelledby="collapsed-tags" data-parent="#accordionPost">
 									<div class="card-body">
 										<input id="tagsjs" type="text" name="tags" placeholder="Input Tag"  value="<?php echo  set_value('tags');?>" class="form-control">
-										<div class="mt-2">
-											<small><b><a href="<?php echo admin_url('tag')?>" target="_blank" class="mt-8"><i class="icon-plus-circle2"></i> <?php echo lang_line('button_add_new')?></a></b></small>
-										</div>
 									</div>
 								</div>
 							</div>

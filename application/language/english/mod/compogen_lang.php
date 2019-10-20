@@ -29,6 +29,7 @@ $lang['label_conf_tinymce'] = 'Field For Content TinyMCE';
 $lang['label_conf_select'] = 'Field For Select Input';
 $lang['label_conf_option'] = 'Option';
 $lang['label_conf_datatable'] = 'Datatable';
+$lang['label_conf_frontend'] = 'Front End';
 $lang['label_conf_column'] = 'Column';
 $lang['label_conf_column_name'] = 'Column Name';
 $lang['label_conf_field_data'] = 'Field Data';

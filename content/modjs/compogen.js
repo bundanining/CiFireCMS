@@ -185,4 +185,6 @@ function _compGenOnInit(){
 	$(document).on('input','#tablename',function(){var b;b=(b=(b=$(this).val()).replace(/\s+/g," ")).replace(/_/g," "),$(this).val(b.toLowerCase()),$(this).val($(this).val().replace(/\W/g," ")),$(this).val($(this).val().replace(/\s+/g,"_"))});
 	$(document).on('input','#com_fieldname_1',function(){var b;b=(b=(b=$(this).val()).replace(/\s+/g," ")).replace(/_/g," "),$(this).val(b.toLowerCase()),$(this).val($(this).val().replace(/\W/g," ")),$(this).val($(this).val().replace(/\s+/g,"_"))});
 	$(document).on('input','input[id^="field"]',function(){var b;b=(b=(b=$(this).val()).replace(/\s+/g," ")).replace(/_/g," "),$(this).val(b.toLowerCase()),$(this).val($(this).val().replace(/\W/g," ")),$(this).val($(this).val().replace(/\s+/g,"_"))});
+
+	$(document).on('input','#route_title',function(){var b;b=(b=(b=$(this).val()).replace(/\s+/g," ")).replace(/_/g," "),$('#route_title').val(b.toLowerCase()),$('#route_title').val($('#route_title').val().replace(/\W/g," ")),$('#route_title').val($('#route_title').val().replace(/\s+/g,"-"))});
 }

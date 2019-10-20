@@ -385,7 +385,7 @@ function cfTnyMCE(element){
 		content_css: content_url+'plugins/member/css/bootstrap.min.css,'+content_url+'plugins/font-awesome/css/font-awesome.min.css',
 		codemirror: {
 			indentOnInit: true,
-			path: site_url+'content/plugins/codemirror'
+			path: content_url+'/plugins/codemirror'
 		},
 		filemanager_title: 'File Manager',
 		filemanager_access_key: ses_key,
@@ -419,7 +419,7 @@ function setLang(lang){
 
 function responsive_filemanager_callback(){
 	var pict = $('#picture').val();
-	var url = site_url + 'content/uploads/' + pict;
+	var url = content_url + '/uploads/' + pict;
 	$('#imgprv').attr('src', url).show();
 	parent.$.fancybox.close();
 	console.log();

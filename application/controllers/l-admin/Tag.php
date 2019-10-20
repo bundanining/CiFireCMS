@@ -11,7 +11,7 @@ class Tag extends Admin_controller {
 		
 		$this->lang->load('mod/'.$this->mod, $this->_language);
 		$this->meta_title(lang_line('mod_title'));
-		$this->load->model('mod/tag_model', 'mod_model');
+		$this->load->model('mod/tag_model');
 	}
 
 
@@ -27,9 +27,9 @@ class Tag extends Admin_controller {
 				{
 					$title = clean_tag($key);
 					$seotitle = seotitle($key,'');
-					if ( $this->mod_model->cek_seotitle($seotitle) == TRUE )
+					if ( $this->tag_model->cek_seotitle($seotitle) == TRUE )
 					{
-						$this->mod_model->insert(array(
+						$this->tag_model->insert(array(
 							'title' => $title,
 							'seotitle' => $seotitle
 						));
@@ -41,7 +41,7 @@ class Tag extends Admin_controller {
 
 			if ( $this->input->is_ajax_request() )
 			{
-				$data_list = $this->mod_model->get_datatables();
+				$data_list = $this->tag_model->get_datatables();
 				$data_output = array();
 
 				foreach ($data_list as $val) 
@@ -56,8 +56,8 @@ class Tag extends Admin_controller {
 
 				$output = array(
 								"draw" => $this->input->post('draw'),
-								"recordsTotal" => $this->mod_model->count_all(),
-								"recordsFiltered" => $this->mod_model->count_filtered(),
+								"recordsTotal" => $this->tag_model->count_all(),
+								"recordsFiltered" => $this->tag_model->count_filtered(),
 								"data" => $data_output,
 								);
 
@@ -81,7 +81,7 @@ class Tag extends Admin_controller {
 			foreach ($data_pk as $key)
 			{
 				$pk = xss_filter(decrypt($key),'sql');
-				$this->mod_model->delete($pk);
+				$this->tag_model->delete($pk);
 			}
 			$response['success'] = true;
 			$response['alert']['type'] = 'success';

@@ -133,14 +133,14 @@ class Setting extends Admin_controller {
 			{
 				$value = trim($this->input->post('value'));
 				$this->setting_model->update('slug_url', array('value' => $value));
-				slug_routes();
+				$this->_save_routes();
 			}
 
 			elseif ( $act == 'slug_title' )
 			{
 				$value = trim($this->input->post('value'));
 				$this->setting_model->update('slug_title', array('value' => $value));
-				slug_routes();
+				$this->_save_routes();
 			}
 
 			elseif ( $act == 'page_item' )
@@ -445,5 +445,47 @@ class Setting extends Admin_controller {
 			$query = $this->CI->db->get('t_slug')->result_array();
 			$this->json_output($query);
 		}
+	}
+
+
+	private function _save_routes()
+	{
+		$slg_setting = $this->db->where('options', 'slug_url')->get('t_setting')->row_array()['value'];
+		$slg_title   = $this->db->where('options', 'slug_title')->get('t_setting')->row_array()['value'];
+		$slg_actives = $this->db->where('title', $slg_setting)->get('t_slug')->result_array();
+
+		$data = [];
+		$data[] = "<?php defined('BASEPATH') OR exit('No direct script access allowed');";
+
+		foreach ($slg_actives as $key) 
+		{
+			if ( $slg_setting === 'slug/seotitle' )
+			{
+				$data[] = '$route[\'' . $slg_title . '/([a-z0-9-]+)\'] = \'post/index/$1\';';
+			}
+
+			if ( $slg_setting === 'yyyy/seotitle' )
+			{
+				$data[] = '$route[\'' . $key['slug'] . '\'] = \'post/index/$2\';';
+			}
+
+			if ( $slg_setting === 'yyyy/mm/seotitle' )
+			{
+				$data[] = '$route[\'' . $key['slug'] . '\'] = \'post/index/$3\';';
+			}
+
+			if ( $slg_setting === 'yyyy/mm/dd/seotitle' )
+			{
+				$data[] = '$route[\'' . $key['slug'] . '\'] = \'post/index/$4\';';
+			}
+
+			if ( $slg_setting === 'seotitle' )
+			{
+				$data[] = '$route[\'' . $key['slug'] . '\'] = \'post/index/$1\';';
+			}
+		}
+
+		$output = implode("\n", $data);
+		write_file(APPPATH . 'config/routes/slug_routes.php', $output);
 	}
 } // End Class.

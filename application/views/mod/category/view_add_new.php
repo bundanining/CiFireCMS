@@ -24,6 +24,9 @@
 	<div class="block">
 		<div class="block-header">
 			<h3><?php echo lang_line('mod_title_add');?></h3>
+			<div class="pull-right">
+				<a href="<?php echo admin_url($this->mod);?>" class="button btn-default btn-sm"><i class="icon-arrow-left7 "></i> <?php echo lang_line('button_back');?></a>
+			</div>
 		</div>
 		<div class="row">
 			<div class="col-md-12">

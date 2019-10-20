@@ -128,9 +128,6 @@
 											$valtag = $this->CI->post_model->valtag($result_post['tag']);
 										?>
 										<input id="tagsjs" type="text" name="tags" value="<?php echo $valtag;?>" class="form-control" placeholder="Input Tags">
-										<div class="mt-2">
-											<small><b><a href="<?php echo admin_url('tag')?>" target="_blank" class="mt-8"><i class="icon-plus-circle2"></i> <?php echo lang_line('button_add_new')?></a></b></small>
-										</div>
 									</div>
 								</div>
 							</div>

@@ -736,7 +736,6 @@ $content = <<< EOS
  * @author	Alweak
  * @license	https://opensource.org/licenses/MIT	MIT License
  * @link	https://www.alweak.com
- * @since	Version {$build_version}
 */
 
 

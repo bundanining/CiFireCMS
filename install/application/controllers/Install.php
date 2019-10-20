@@ -96,7 +96,7 @@ class Install extends CI_Controller {
 				'level'    => '1',
 				'about'    => 'Lorem ipsum dolor sit amet consectetur adipiscing elit fusce eget turpis pulvinar interdum tellus blandit imperdiet velit.',
 				'address'  => 'Lorem ipsum dolor sit amet consectetur adipiscing elit fusce eget turpis pulvinar interdum tellus blandit imperdiet velit.',
-				'tlpn'     => '012-2345-6789',
+				'tlpn'     => '08123456789',
 				'gender'   => 'M',
 				'birthday' => date('Y-m-d'),
 				'photo'    => 'user-1.jpg',

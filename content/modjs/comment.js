@@ -1,4 +1,3 @@
-
 $('#DataTable').DataTable({
     'language': {
         'url': datatable_lang,
@@ -51,13 +50,13 @@ $('#DataTable').DataTable({
         $('.modal_detail').click(function() {
 			var idDet = $(this).attr('idDet');
 			$('#modal_detail').modal('show');
-			$('#cdet').html('<div><img src="'+site_url+'/content/images/loading.gif" style="display:table;margin:auto;"></div>');
+			$('#cdet').html('<div><img src="' + content_url + '/images/loading.gif" style="display:table;margin:auto;"></div>');
 			$.ajax({
 				type: 'POST',
-				url: window.location.href+'/view-detail/'+idDet,
-				data: 'id='+idDet+'&'+csrfName+'='+csrfToken,
+				url: window.location.href + '/view-detail/' + idDet,
+				data: 'id=' + idDet + '&' + csrfName + '=' + csrfToken,
 				success: function(data){
-					$('#cdet').html('<div><b>'+ data.name +'</b>&nbsp;<small class="text-muted">('+ data.email +')</small></div><div style="margin-bottom:18px;font-size:14px;color:#888;"><small>'+ data.date +'</small></div><div><p>'+ data.comment +'</p></div>');
+					$('#cdet').html('<div><b>' + data.name + '</b>&nbsp;<small class="text-muted">(' + data.email + ')</small></div><div style="margin-bottom:18px;font-size:14px;color:#888;"><small>' + data.date + '</small></div><div><p>' + data.comment + '</p></div>');
 					$('#active'+idDet).removeClass('text-success');
 					$('#active'+idDet).removeClass('fa-commenting');
 					$('#active'+idDet).addClass(data.textClass);
@@ -72,10 +71,10 @@ $('#DataTable').DataTable({
 			$('#modal_block').modal('show');
 		});
 
-		$('.modal_unblock').click(function() {
+		$('.modal_active').click(function() {
 			var idCom = $(this).attr('idCom');
 			$('#idComu').val(idCom);
-			$('#modal_unblock').modal('show');
+			$('#modal_active').modal('show');
 		});
     }
 });

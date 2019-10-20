@@ -8,7 +8,7 @@
  *   License : MIT License
 */
 
-
+if ( ! function_exists('dump_file_html')) {
 /**
  * - File index.html
  * - Ini adalah fungsi untuk membuat konten file index.html.
@@ -22,11 +22,12 @@ $write = <<<EOS
 EOS;
 return $write;
 } //----------------------> End funcion. File index.html
+}
 
 
 
 
-
+if ( ! function_exists('dump_view_index')) {
 /**
  *-------------------------------------------------------------
  *  VIEW INDEX.
@@ -161,6 +162,7 @@ EOS;
 
 return $write;
 } //----------------------------> End function.  Dump View Index.
+} // endif
 
 
 
@@ -182,8 +184,7 @@ return $write;
 
 
 
-
-
+if ( ! function_exists('dump_view_add')) {
 /**
  * ---------------------------------------------------------
  *  VIEW ADD NEW
@@ -395,6 +396,7 @@ EOS;
 
 return $write;
 } //----------------------------------> End funcion. VIEW ADD NEW. 
+} // endif
 
 
 
@@ -410,8 +412,7 @@ return $write;
 
 
 
-
-
+if ( ! function_exists('dump_view_edit')) {
 /**
  * -----------------------------------------------------------
  *  VIEW EDIT
@@ -617,6 +618,7 @@ EOS;
 
 return $write;
 } //----------------------------------> End funcion. VIEW EDIT. 
+} // endif
 
 
 
@@ -632,8 +634,7 @@ return $write;
 
 
 
-
-
+if ( ! function_exists('dump_file_javascript')) {
 /**
  * -------------------------------------------------------------
  * Dum for file mod js *.js
@@ -784,6 +785,7 @@ function responsive_filemanager_callback(field_id) {
 EOS;
 return $write;
 } //----------------------> End funcion. File javasript.
+} // endif
 
 
 
@@ -799,8 +801,7 @@ return $write;
 
 
 
-
-
+if ( ! function_exists('dump_file_controller')) {
 /**
  * ----------------------------------------------------------------
  * Dum for file Controller *.php
@@ -1226,6 +1227,7 @@ $write .= <<< EOS
 EOS;
 return $write;
 } //----------------------> End funcion. File Controller.
+} // endif
 
 
 
@@ -1241,8 +1243,7 @@ return $write;
 
 
 
-
-
+if ( ! function_exists('dump_file_model')) {
 /**
  * ----------------------------------------------------------
  * Dum for file Model *.php
@@ -1464,6 +1465,7 @@ $write .= <<< EOS
 EOS;
 return $write;
 } //----------------------> End funcion. File Model.
+} // endif
 
 
 
@@ -1479,8 +1481,7 @@ return $write;
 
 
 
-
-
+if ( ! function_exists('write_input_text')) {
 /**
  * - Text.
  * - Ini adalah fungsi untuk membuat input text.
@@ -1510,12 +1511,12 @@ $content = <<< EOS
 EOS;
 return $content;
 } //---------> End function write_input_text.
+} // endif
 
 
 
 
-
-
+if ( ! function_exists('write_input_number')) {
 /**
  * - Number.
  * - Ini adalah fungsi untuk membuat input number.
@@ -1545,12 +1546,12 @@ $content = <<< EOS
 EOS;
 return $content;
 } //---------> End function write_input_number.
+} // endif
 
 
 
 
-
-
+if ( ! function_exists('write_input_select')) {
 /**
  * - Select Option.
  * - Ini adalah fungsi untuk membuat input select.
@@ -1592,9 +1593,10 @@ $content = <<<EOS
 EOS;
 return $content;
 } //---------> End Function write_input_select.
+} // endif
 
 
-
+if ( ! function_exists('write_input_enum')) {
 /**
  * - Select ENUM.
  * - Ini adalah fungsi untuk membuat input select.
@@ -1646,9 +1648,10 @@ $content = <<<EOS
 EOS;
 return $content;
 } //---------> End Function write_input_enum.
+} // endif
 
 
-
+if ( ! function_exists('write_input_textarea')) {
 /**
  * - Textarea.
  * - Ini adalah fungsi untuk membuat input textarea.
@@ -1678,11 +1681,11 @@ $content = <<< EOS
 EOS;
 return $content;
 } //---------> End function write_input_textarea.
+} // endif
 
 
 
-
-
+if ( ! function_exists('write_input_tinymce')) {
 /**
  * - Textarea TinyMCE.
  * - Ini adalah fungsi untuk membuat input textarea dengan plugin TinyMCE.
@@ -1712,11 +1715,11 @@ $content = <<< EOS
 EOS;
 return $content;
 } //---------> End function write_input_tinymce.
+} // endif
 
 
 
-
-
+if ( ! function_exists('write_input_date')) {
 /**
  * - Text DATE.
  * - Ini adalah fungsi untuk membuat input date.
@@ -1756,11 +1759,11 @@ $content = <<<EOS
 EOS;
 return $content;
 } //---------> End function write_input_date.
+} // endif
 
 
 
-
-
+if ( ! function_exists('write_input_time')) {
 /**
  * - Text Time.
  * - Ini adalah fungsi untuk membuat input time.
@@ -1800,11 +1803,11 @@ $content = <<<EOS
 EOS;
 return $content;
 } //---------> End function write_input_time.
+} // endif
 
 
 
-
-
+if ( ! function_exists('write_input_datetime')) {
 /**
  * - Text DateTime.
  * - Ini adalah fungsi untuk membuat input datetime.
@@ -1844,11 +1847,11 @@ $content = <<<EOS
 EOS;
 return $content;
 } //---------> End function write_input_datetime.
+} // endif
 
 
 
-
-
+if ( ! function_exists('write_input_filemanager')) {
 /**
  * - File input browse filemanager.
  * - Ini adalah fungsi untuk membuat input browse filemanager.
@@ -1884,3 +1887,311 @@ $content = <<< EOS
 EOS;
 return $content;
 } //---------> End function write_input_filemanager.
+} // endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * ---------------------------------------------------------------------------------------------
+ * Dum for frontend file Controller *.php
+ * ---------------------------------------------------------------------------------------------
+*/
+
+function dump_frontend_controller($data) {
+$component_name = $data['general']['component_name'];
+$cname      = seotitle($data['general']['class_name'],'_');
+$class_name = "Mod_".$cname;
+$class_mod  = underscore($cname);
+$model_name = $class_name."_model";
+$meta_title = ( !empty($data['frontend']['meta_title']) ? $data['frontend']['meta_title'] : $component_name);
+$filename   = $class_name.".php";
+$views_file = "mod_$cname";
+$rdate      = ci_date(DATE('Y-m-d h:i:s'), 'l, d F Y | h:i A');
+
+$write = '';
+$write .= <<<EOS
+<?php defined('BASEPATH') OR exit('No direct script access allowed');
+/**
+ * - This file was created using CompoGen
+ * 
+ * - Mod          : {$component_name}
+ * - File         : {$filename}
+ * - Date created : {$rdate}
+ * - Author       : CompoGen
+ * - License      : MIT License
+*/
+
+class {$class_name} extends Web_controller {
+
+	public function __construct() 
+	{
+		parent::__construct();
+		
+		\$this->load->model("web/{$model_name}"); // Load model
+		\$this->meta_title("{$meta_title}"); // Set meta title
+	}
+
+
+	public function index()
+	{
+		\$this->vars['datas'] = \$this->{$model_name}->get_data(); // get data
+		
+		// render view
+		// \$this->render_view('header', \$this->vars);
+		\$this->render_view('{$views_file}', \$this->vars);
+		// \$this->render_view('footer', \$this->vars);
+	}
+
+} // End Class.
+EOS;
+
+
+
+return $write;
+} //---------> End function dump_frontend_controller.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * ---------------------------------------------------------------------------------------------
+ * Dum for frontend file Model *.php
+ * ---------------------------------------------------------------------------------------------
+*/
+function dump_frontend_model($data) {
+$component_name = $data['general']['component_name'];
+$cname = seotitle($data['general']['class_name'],'_');
+$class_name = "Mod_".$cname."_model";
+$table_name = $data['table_name'];
+$data_general = $data['general'];
+$data_field_1 = $data['com_filed_name_1'];
+
+if (!empty($data['col'])) {
+	$data_cols = $data['col'];
+}
+
+$filename = $class_name.".php";
+$rdate = ci_date(DATE('Y-m-d h:i:s'), 'l, d F Y | h:i A');
+$write = '';
+$write .= <<<EOS
+<?php defined('BASEPATH') OR exit('No direct script access allowed');
+/**
+ * - This file was created using CompoGen
+ * 
+ * - Mod          : {$component_name}
+ * - File         : {$filename}.php
+ * - Date created : {$rdate}
+ * - Author       : CompoGen
+ * - License      : MIT License
+*/
+
+class {$class_name} extends CI_Model {
+
+	private \$_table = '{$table_name}';
+
+	public function __construct()
+	{
+		parent::__construct();
+	}
+
+
+	public function get_data()
+	{
+		\$query = \$this->db->select('{$data_field_1}
+EOS;
+if (!empty($data['col'])) {
+foreach ($data_cols as $key => $val) {
+$col_field = $val['col_field'];
+$write .= <<< EOS
+,{$col_field}
+EOS;
+}
+}
+$write .= <<<EOS
+');
+		\$query = \$this->db->from(\$this->_table);
+		\$query = \$this->db->order_by('{$data_field_1}', 'DESC');
+		\$query = \$this->db->get();
+		\$result = \$query->result_array();
+		return \$result;
+	}
+} // End Class.
+EOS;
+return $write;
+} //---------> End function dump_frontend_model.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * ---------------------------------------------------------------------------------------------
+ * Dum for frontend file View  *.php
+ * ---------------------------------------------------------------------------------------------
+*/
+function dump_frontend_view($data) {
+$component_name = $data['general']['component_name'];
+if (!empty($data['col'])) {
+	$data_cols = $data['col'];
+}
+
+$write = '';
+$write .= <<<EOS
+<?php defined('BASEPATH') OR exit('No direct script access allowed');?>
+<!-- 
+*******************************************************
+	Include Header Template
+******************************************************* 
+-->
+<?php \$this->CI->render_view('header'); ?>
+
+<!-- 
+*******************************************************
+	Insert Content
+******************************************************* 
+-->
+
+<section id="page-title">
+	<div class="container clearfix">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="<?=site_url();?>">Home</a></li>
+			<li class="breadcrumb-item active" aria-current="page">{$component_name}</li>
+		</ol>
+	</div>
+</section>
+<section id="content">
+	<div class="content-wrap pt-5">
+		<div class="container clearfix">
+			<div class="">
+				<h1>{$component_name}</h1>
+			</div>
+			<div class="col_full detail-content">
+
+				<table class="table table-condensed table-sm table-bordered table-striped">
+					<thead>
+						<tr>\n
+EOS;
+
+if (!empty($data['col'])) {
+foreach ($data_cols as $key => $val) {
+$row_value = humanize($val['col_name']);
+$write .= <<< EOS
+							<th>{$row_value}</th>\n
+EOS;
+}
+}
+
+$write .= <<<EOS
+						</tr>
+					</thead>
+					<tbody>
+						<?php foreach (\$datas as \$result): ?>
+						<tr>\n
+EOS;
+
+if (!empty($data['col'])) {
+foreach ($data_cols as $key => $val) {
+$td_value = $val['col_field'];
+$write .= <<< EOS
+							<td><?=\$result['{$td_value}'];?></td>\n
+EOS;
+}
+}
+
+$write .= <<<EOS
+						</tr>
+						<?php endforeach ?>
+					</tbody>
+				</table>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+</section>
+
+<!-- 
+*******************************************************
+	Include Footer Template
+******************************************************* 
+-->
+<?php \$this->CI->render_view('footer'); ?>
+EOS;
+
+return $write;
+} //---------> End function dump_frontend_view.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * ---------------------------------------------------------------------------------------------
+ * Dum for frontend route
+ * ---------------------------------------------------------------------------------------------
+*/
+function dump_frontend_route($data) {
+$component_name = $data['general']['component_name'];
+$cname          = seotitle($data['general']['class_name']);
+$class_name     = "mod-".$cname;
+$class_route    = (!empty($data['frontend']['route']) ? $data['frontend']['route'] : $class_name);
+
+$write = <<<EOS
+<?php defined('BASEPATH') OR exit('No direct script access allowed');
+\$route['{$class_route}'] = '{$class_name}/index';
+EOS;
+return $write;
+} //---------> End function dump_frontend_view.

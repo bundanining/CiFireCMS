@@ -26,7 +26,6 @@
  * @author	Alweak
  * @license	https://opensource.org/licenses/MIT	MIT License
  * @link	https://www.alweak.com
- * @since	Version 1.1.0
 */
 
 define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'production');

@@ -394,8 +394,8 @@ class Menumanager extends Admin_Controller {
 
 	function _get_label($row) 
 	{
-		$img_edit = base_url('content/images/menu/edit.png');
-		$img_cross = base_url('content/images/menu/cross.png');
+		$img_edit  = content_url('images/menu/edit.png');
+		$img_cross = content_url('images/menu/cross.png');
 		$label =
 			'<div class="ns-row">' .
 				'<div class="ns-title">'.$row['title'].'</div>' .

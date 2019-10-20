@@ -1,1 +1,450 @@
-.uniform-checker,.uniform-choice{position:relative;cursor:pointer;vertical-align:middle}.uniform-checker,.uniform-checker input,.uniform-checker span,.uniform-choice,.uniform-choice input,.uniform-choice span{width:16px;height:16px;margin-top:3px}.uniform-checker span,.uniform-choice span{border:1px solid #455a64;display:inline-block;text-align:center;position:relative}.uniform-checker span.checked:after,.uniform-choice span.checked:after{opacity:1}.uniform-checker input[type=checkbox],.uniform-checker input[type=radio],.uniform-choice input[type=checkbox],.uniform-choice input[type=radio]{border:0;background:0 0;display:inline-block;margin:0;cursor:pointer;position:absolute;top:-.125rem;left:-.125rem;visibility:visible;opacity:0;z-index:2}.form-check.form-check-inline .uniform-checker input[type=checkbox],.form-check.form-check-inline .uniform-checker input[type=radio],.form-check.form-check-inline .uniform-choice input[type=checkbox],.form-check.form-check-inline .uniform-choice input[type=radio]{margin-left:0;margin-right:0}.form-check .uniform-checker,.form-check .uniform-choice{position:absolute;top:.00002rem;left:0}.form-check-right .uniform-checker,.form-check-right .uniform-choice{left:auto;right:0}.form-check-inline .uniform-checker,.form-check-inline .uniform-choice{margin-right:.625rem;margin-top:.00002rem}.form-check-inline.form-check-right .uniform-checker,.form-check-inline.form-check-right .uniform-choice{margin-right:0;margin-left:.625rem}.uniform-checker.disabled,.uniform-choice.disabled{opacity:.5}.uniform-checker.disabled,.uniform-checker.disabled input,.uniform-choice.disabled,.uniform-choice.disabled input{cursor:default}.uniform-checker span{color:#455a64;border-radius:.125rem;transition:border-color ease-in-out .15s,color ease-in-out .15s}@media screen and (prefers-reduced-motion:reduce){.uniform-checker span{transition:none}}.uniform-checker span:after{content:"\e600";font-family:icomoon;font-size:1rem;position:absolute;top:0;left:0;line-height:1;opacity:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;transition:opacity ease-in-out .15s}@media screen and (prefers-reduced-motion:reduce){.uniform-checker span:after{transition:none}}.form-check-light .uniform-checker span{border-color:#fff;color:#fff}.uniform-checker[class*=border-] span{border-color:inherit;color:inherit}.uniform-choice{border-radius:100px}.uniform-choice span{border-radius:100px;transition:border-color ease-in-out .15s}@media screen and (prefers-reduced-motion:reduce){.uniform-choice span{transition:none}}.uniform-choice span:after{content:"";position:absolute;top:2px;left:2px;border:.3125rem solid;border-top-color:currentcolor;border-right-color:currentcolor;border-bottom-color:currentcolor;border-left-color:currentcolor;border-color:inherit;width:0;height:0;border-radius:100px;opacity:0;transition:all ease-in-out .15s}@media screen and (prefers-reduced-motion:reduce){.uniform-choice span:after{transition:none}}.form-check-light .uniform-choice span{border-color:#fff}.uniform-choice[class*=border-] span{border-color:inherit}.uniform-choice[class*=border-] span:after{border-color:inherit}.dropdown-menu:not([class*=bg-]) .dropdown-item.active:not(.disabled) .uniform-checker span{border-color:#fff;color:#fff}.dropdown-menu:not([class*=bg-]) .dropdown-item.active:not(.disabled) .uniform-choice span{border-color:#fff}.dropdown-item.form-check .form-check-label{padding-left:3.25rem}.dropdown-item.form-check .uniform-checker,.dropdown-item.form-check .uniform-choice{margin-top:.50002rem;left:1rem}.dropdown-item.form-check.form-check-right .form-check-label{padding-right:3.25rem}.dropdown-item.form-check.form-check-right .uniform-checker,.dropdown-item.form-check.form-check-right .uniform-choice{left:auto;right:1rem}.dropdown-menu[class*=bg-]:not(.bg-white):not(.bg-transparent):not(.bg-light) .uniform-checker span{border-color:#fff;color:#fff}.dropdown-menu[class*=bg-]:not(.bg-white):not(.bg-transparent):not(.bg-light) .uniform-choice span{border-color:#fff}.uniform-uploader{position:relative;display:-ms-flexbox;display:flex;-ms-flex-align:stretch;align-items:stretch}.uniform-uploader .filename{color:#999;padding:.4375rem .875rem;-ms-flex:1;flex:1;border:1px solid #ddd;border-right:0;background-color:#fff;text-align:left;word-break:break-word;border-top-left-radius:.1875rem;border-bottom-left-radius:.1875rem}.uniform-uploader .action{z-index:1;border-radius:0;border-top-right-radius:.1875rem;border-bottom-right-radius:.1875rem}.uniform-uploader input[type=file]{width:100%;margin-top:0;position:absolute;top:0;right:0;bottom:0;min-height:2.25003rem;border:0;cursor:pointer;z-index:10;opacity:0}.uniform-uploader.disabled .filename{background-color:#fafafa}.uniform-uploader.disabled .filename,.uniform-uploader.disabled input[type=file]{cursor:default}.form-control-styled-lg input[type=file]{min-height:2.50002rem}.form-control-styled-lg .filename{padding:.5625rem 1rem;font-size:.875rem;line-height:1.4286}.form-control-styled-sm input[type=file]{min-height:2.00002rem}.form-control-styled-sm .filename{padding:.3125rem .75rem;font-size:.75rem;line-height:1.6667}.uniform-select{position:relative;display:block;width:100%;height:2.25003rem;padding:.4375rem .875rem;font-size:.8125rem;line-height:1.5385;color:#333;background-color:#fff;border:1px solid #ddd;border-radius:.1875rem;transition:all ease-in-out .15s}@media screen and (prefers-reduced-motion:reduce){.uniform-select{transition:none}}.uniform-select:focus,.uniform-select:hover{box-shadow:0 0 0 62.5rem rgba(0,0,0,.01) inset}.uniform-select[class*=bg-]:not(.bg-white):not(.bg-light):not(.bg-transparent){color:#fff}.uniform-select[class*=bg-]:not(.bg-white):not(.bg-light):not(.bg-transparent):focus,.uniform-select[class*=bg-]:not(.bg-white):not(.bg-light):not(.bg-transparent):hover{box-shadow:0 0 0 62.5rem rgba(0,0,0,.04) inset}.uniform-select span{display:block;position:relative;text-align:left;padding-right:1.875rem;width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.uniform-select span:after{content:'\e9c5';font-family:icomoon;display:inline-block;position:absolute;top:0;right:0;font-size:1rem;margin-top:-.12502rem;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.uniform-select select{width:100%;margin-top:0;position:absolute;top:0;right:0;bottom:0;height:2.25003rem;border:0;cursor:pointer;z-index:10;opacity:0}.uniform-select.disabled:not([class*=bg-]){color:#999;background-color:#fafafa}.uniform-select.disabled:focus,.uniform-select.disabled:hover{box-shadow:none!important}.uniform-select.disabled select{cursor:default}.uniform-select.disabled[class*=bg-]:not(.bg-white):not(.bg-light):not(.bg-transparent){opacity:.75}.form-control-styled-lg select:not([size]):not([multiple]){height:2.50002rem}.form-control-styled-lg .uniform-select{height:2.50002rem;padding:.5625rem 1rem;font-size:.875rem;line-height:1.4286}.form-control-styled-sm select:not([size]):not([multiple]){height:2.00002rem}.form-control-styled-sm .uniform-select{height:2.00002rem;padding:.3125rem .75rem;font-size:.75rem;line-height:1.6667}input[type=checkbox],input[type=radio]{border:1px solid #b4b9be;background:#fff;color:#555;clear:none;cursor:pointer;display:inline-block;height:16px;margin:0;outline:0;padding:0!important;text-align:center;vertical-align:middle;width:16px;min-width:16px;-webkit-appearance:none;box-shadow:inset 0 1px 2px rgba(0,0,0,.1);transition:.05s border-color ease-in-out}input[type=checkbox]:checked::before{content:"\f00c";margin:1px 0 0 -1px;color:#444}input[type=checkbox]:checked::before,input[type=radio]:checked::before{float:left;display:inline-block;vertical-align:middle;width:16px;font:normal 12px/1 fontAwesome;speak:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.uniform-checker,
+.uniform-choice {
+    position: relative;
+    cursor: pointer;
+    vertical-align: middle
+}
+
+.uniform-checker,
+.uniform-checker input,
+.uniform-checker span,
+.uniform-choice,
+.uniform-choice input,
+.uniform-choice span {
+    width: 16px;
+    height: 16px;
+    margin-top: 3px
+}
+
+.uniform-checker span,
+.uniform-choice span {
+    border: 1px solid #455a64;
+    display: inline-block;
+    text-align: center;
+    position: relative
+}
+
+.uniform-checker span.checked:after,
+.uniform-choice span.checked:after {
+    opacity: 1
+}
+
+.uniform-checker input[type=checkbox],
+.uniform-checker input[type=radio],
+.uniform-choice input[type=checkbox],
+.uniform-choice input[type=radio] {
+    border: 0;
+    background: 0 0;
+    display: inline-block;
+    margin: 0;
+    cursor: pointer;
+    position: absolute;
+    top: -.125rem;
+    left: -.125rem;
+    visibility: visible;
+    opacity: 0;
+    z-index: 2
+}
+
+.form-check.form-check-inline .uniform-checker input[type=checkbox],
+.form-check.form-check-inline .uniform-checker input[type=radio],
+.form-check.form-check-inline .uniform-choice input[type=checkbox],
+.form-check.form-check-inline .uniform-choice input[type=radio] {
+    margin-left: 0;
+    margin-right: 0
+}
+
+.form-check .uniform-checker,
+.form-check .uniform-choice {
+    position: absolute;
+    top: .00002rem;
+    left: 0
+}
+
+.form-check-right .uniform-checker,
+.form-check-right .uniform-choice {
+    left: auto;
+    right: 0
+}
+
+.form-check-inline .uniform-checker,
+.form-check-inline .uniform-choice {
+    margin-right: .625rem;
+    margin-top: .00002rem
+}
+
+.form-check-inline.form-check-right .uniform-checker,
+.form-check-inline.form-check-right .uniform-choice {
+    margin-right: 0;
+    margin-left: .625rem
+}
+
+.uniform-checker.disabled,
+.uniform-choice.disabled {
+    opacity: .5
+}
+
+.uniform-checker.disabled,
+.uniform-checker.disabled input,
+.uniform-choice.disabled,
+.uniform-choice.disabled input {
+    cursor: default
+}
+
+.uniform-checker span {
+    color: #455a64;
+    border-radius: .125rem;
+    transition: border-color ease-in-out .15s, color ease-in-out .15s
+}
+
+@media screen and (prefers-reduced-motion:reduce) {
+    .uniform-checker span {
+        transition: none
+    }
+}
+
+.uniform-checker span:after {
+    content: "\e600";
+    font-family: icomoon;
+    font-size: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 1;
+    opacity: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: opacity ease-in-out .15s
+}
+
+@media screen and (prefers-reduced-motion:reduce) {
+    .uniform-checker span:after {
+        transition: none
+    }
+}
+
+.form-check-light .uniform-checker span {
+    border-color: #fff;
+    color: #fff
+}
+
+.uniform-checker[class*=border-] span {
+    border-color: inherit;
+    color: inherit
+}
+
+.uniform-choice {
+    border-radius: 100px
+}
+
+.uniform-choice span {
+    border-radius: 100px;
+    transition: border-color ease-in-out .15s
+}
+
+@media screen and (prefers-reduced-motion:reduce) {
+    .uniform-choice span {
+        transition: none
+    }
+}
+
+.uniform-choice span:after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    border: .3125rem solid;
+    border-top-color: currentcolor;
+    border-right-color: currentcolor;
+    border-bottom-color: currentcolor;
+    border-left-color: currentcolor;
+    border-color: inherit;
+    width: 0;
+    height: 0;
+    border-radius: 100px;
+    opacity: 0;
+    transition: all ease-in-out .15s
+}
+
+@media screen and (prefers-reduced-motion:reduce) {
+    .uniform-choice span:after {
+        transition: none
+    }
+}
+
+.form-check-light .uniform-choice span {
+    border-color: #fff
+}
+
+.uniform-choice[class*=border-] span {
+    border-color: inherit
+}
+
+.uniform-choice[class*=border-] span:after {
+    border-color: inherit
+}
+
+.dropdown-menu:not([class*=bg-]) .dropdown-item.active:not(.disabled) .uniform-checker span {
+    border-color: #fff;
+    color: #fff
+}
+
+.dropdown-menu:not([class*=bg-]) .dropdown-item.active:not(.disabled) .uniform-choice span {
+    border-color: #fff
+}
+
+.dropdown-item.form-check .form-check-label {
+    padding-left: 3.25rem
+}
+
+.dropdown-item.form-check .uniform-checker,
+.dropdown-item.form-check .uniform-choice {
+    margin-top: .50002rem;
+    left: 1rem
+}
+
+.dropdown-item.form-check.form-check-right .form-check-label {
+    padding-right: 3.25rem
+}
+
+.dropdown-item.form-check.form-check-right .uniform-checker,
+.dropdown-item.form-check.form-check-right .uniform-choice {
+    left: auto;
+    right: 1rem
+}
+
+.dropdown-menu[class*=bg-]:not(.bg-white):not(.bg-transparent):not(.bg-light) .uniform-checker span {
+    border-color: #fff;
+    color: #fff
+}
+
+.dropdown-menu[class*=bg-]:not(.bg-white):not(.bg-transparent):not(.bg-light) .uniform-choice span {
+    border-color: #fff
+}
+
+.uniform-uploader {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: stretch;
+    align-items: stretch
+}
+
+.uniform-uploader .filename {
+    color: #999;
+    padding: .4375rem .875rem;
+    -ms-flex: 1;
+    flex: 1;
+    border: 1px solid #ddd;
+    border-right: 0;
+    background-color: #fff;
+    text-align: left;
+    word-break: break-word;
+    border-top-left-radius: .1875rem;
+    border-bottom-left-radius: .1875rem
+}
+
+.uniform-uploader .action {
+    z-index: 1;
+    border-radius: 0;
+    border-top-right-radius: .1875rem;
+    border-bottom-right-radius: .1875rem
+}
+
+.uniform-uploader input[type=file] {
+    width: 100%;
+    margin-top: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    min-height: 2.25003rem;
+    border: 0;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0
+}
+
+.uniform-uploader.disabled .filename {
+    background-color: #fafafa
+}
+
+.uniform-uploader.disabled .filename,
+.uniform-uploader.disabled input[type=file] {
+    cursor: default
+}
+
+.form-control-styled-lg input[type=file] {
+    min-height: 2.50002rem
+}
+
+.form-control-styled-lg .filename {
+    padding: .5625rem 1rem;
+    font-size: .875rem;
+    line-height: 1.4286
+}
+
+.form-control-styled-sm input[type=file] {
+    min-height: 2.00002rem
+}
+
+.form-control-styled-sm .filename {
+    padding: .3125rem .75rem;
+    font-size: .75rem;
+    line-height: 1.6667
+}
+
+.uniform-select {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 2.25003rem;
+    padding: .4375rem .875rem;
+    font-size: .8125rem;
+    line-height: 1.5385;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: .1875rem;
+    transition: all ease-in-out .15s
+}
+
+@media screen and (prefers-reduced-motion:reduce) {
+    .uniform-select {
+        transition: none
+    }
+}
+
+.uniform-select:focus,
+.uniform-select:hover {
+    box-shadow: 0 0 0 62.5rem rgba(0, 0, 0, .01) inset
+}
+
+.uniform-select[class*=bg-]:not(.bg-white):not(.bg-light):not(.bg-transparent) {
+    color: #fff
+}
+
+.uniform-select[class*=bg-]:not(.bg-white):not(.bg-light):not(.bg-transparent):focus,
+.uniform-select[class*=bg-]:not(.bg-white):not(.bg-light):not(.bg-transparent):hover {
+    box-shadow: 0 0 0 62.5rem rgba(0, 0, 0, .04) inset
+}
+
+.uniform-select span {
+    display: block;
+    position: relative;
+    text-align: left;
+    padding-right: 1.875rem;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.uniform-select span:after {
+    content: '\e9c5';
+    font-family: icomoon;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1rem;
+    margin-top: -.12502rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.uniform-select select {
+    width: 100%;
+    margin-top: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 2.25003rem;
+    border: 0;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0
+}
+
+.uniform-select.disabled:not([class*=bg-]) {
+    color: #999;
+    background-color: #fafafa
+}
+
+.uniform-select.disabled:focus,
+.uniform-select.disabled:hover {
+    box-shadow: none!important
+}
+
+.uniform-select.disabled select {
+    cursor: default
+}
+
+.uniform-select.disabled[class*=bg-]:not(.bg-white):not(.bg-light):not(.bg-transparent) {
+    opacity: .75
+}
+
+.form-control-styled-lg select:not([size]):not([multiple]) {
+    height: 2.50002rem
+}
+
+.form-control-styled-lg .uniform-select {
+    height: 2.50002rem;
+    padding: .5625rem 1rem;
+    font-size: .875rem;
+    line-height: 1.4286
+}
+
+.form-control-styled-sm select:not([size]):not([multiple]) {
+    height: 2.00002rem
+}
+
+.form-control-styled-sm .uniform-select {
+    height: 2.00002rem;
+    padding: .3125rem .75rem;
+    font-size: .75rem;
+    line-height: 1.6667
+}
+
+input[type=checkbox],
+input[type=radio] {
+    border: 1px solid #b4b9be;
+    background: #fff;
+    color: #555;
+    clear: none;
+    cursor: pointer;
+    display: inline-block;
+    height: 16px;
+    margin: 0;
+    outline: 0;
+    padding: 0!important;
+    text-align: center;
+    vertical-align: middle;
+    width: 16px;
+    min-width: 16px;
+    -webkit-appearance: none;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+    transition: .05s border-color ease-in-out
+}
+
+input[type=checkbox]:checked::before,
+input[type=radio]:checked::before
+ {
+    content: "\f00c";
+    margin: 1px 0 0 -1px;
+    color: #444
+}
+
+input[type=checkbox]:checked::before,
+input[type=radio]:checked::before
+ {
+    float: left;
+    display: inline-block;
+    vertical-align: middle;
+    width: 16px;
+    font: normal 12px/1 fontAwesome;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}

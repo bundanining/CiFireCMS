@@ -97,7 +97,7 @@ $('#form_update').on('submit',function(event){
 $('#delpict').on('click',function(event){
 	event.preventDefault();
 	$('#picture').val('');
-	$('#imgprv').attr('src',site_url+'content/images/noimage.jpg');
+	$('#imgprv').attr('src', content_url + '/images/noimage.jpg');
 });
 
 cfTnyMCE('#Content'); // load TnyMCE

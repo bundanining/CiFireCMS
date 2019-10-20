@@ -4,7 +4,7 @@
 	Include Header Template
 ******************************************************* 
 -->
-<?php require_once('header.php'); ?>
+<?php $this->CI->render_view('header'); ?>
 <!-- End Header -->
 
 <!-- 
@@ -41,5 +41,5 @@
 	Include Footer Template
 ******************************************************* 
 -->
-<?php require_once('footer.php'); ?>
+<?php $this->CI->render_view('footer'); ?>
 <!-- End Footer -->

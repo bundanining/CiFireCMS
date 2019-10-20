@@ -1,8 +1,8 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-$lang['mod_title'] = 'Mail';
+$lang['mod_title'] = 'Pesan';
 $lang['mod_title_detail'] = 'Detail';
-$lang['mod_title_reply'] = 'Balas';
+$lang['mod_title_reply'] = 'Balas Pesan';
 $lang['mod_title_read'] = 'Detail';
 $lang['inbox'] = 'Kotak Masuk';
 $lang['send_box'] = 'Terkirim';

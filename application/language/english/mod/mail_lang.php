@@ -2,7 +2,7 @@
 
 $lang['mod_title'] = 'Mail';
 $lang['mod_title_detail'] = 'Detail';
-$lang['mod_title_reply'] = 'Reply';
+$lang['mod_title_reply'] = 'Reply Mail';
 $lang['mod_title_read'] = 'Read';
 $lang['inbox'] = 'Inbox';
 $lang['send_box'] = 'Send';

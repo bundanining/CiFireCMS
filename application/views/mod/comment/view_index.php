@@ -95,18 +95,18 @@
 	</div>
 </div>
 
-<div id="modal_unblock" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+<div id="modal_active" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<?php echo form_open('','id="form_blocked" autocomplete="off"'); ?>
 			<input type="hidden" name="act" value="unblock">
 			<input type="hidden" name="id" id="idComu" >
 			<div class="modal-header">
-				<h5 class="modal-title"><i class="fa fa-check-circle-o text-success mr-2"></i><?php echo lang_line('dialog_unblock_title');?></h5>
+				<h5 class="modal-title"><i class="fa fa-check-circle-o text-success mr-2"></i><?php echo lang_line('dialog_active_title');?></h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 			</div>
 			<div class="modal-body" id="cdet">
-				<h4><?php echo lang_line('dialog_unblock_content');?></h4>
+				<h4><?php echo lang_line('dialog_active_content');?></h4>
 			</div>
 			<div class="modal-footer">
 				<button type="submit" class="button btn-primary"><i class="fa fa-check"></i> <?php echo lang_line('button_yes');?></button>
