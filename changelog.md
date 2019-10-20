@@ -14,8 +14,6 @@
 - Perbaikan keseluruhan code program pada halaman member. 
 - Perbaikan program pengiriman email register dan forgot password.
 - Minify script plugins.
-- Remove file application\cache\routes.php
-- Create file application\config\slug_routes.php
+- Perubahan logic dinamic routes
 - Update submit setting slug.
-- Change helper function save_routes() to slug_routes()
 - Fixed other bugs.
